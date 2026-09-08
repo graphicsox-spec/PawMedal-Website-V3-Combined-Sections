@@ -1157,7 +1157,7 @@ a {
 
 .pm-finder-radar-bg {
   position: absolute;
-  top: 50%;
+  top: calc(50% + 15px);
   left: 50%;
   transform: translate(-50%, -46%);
   width: 440px;
