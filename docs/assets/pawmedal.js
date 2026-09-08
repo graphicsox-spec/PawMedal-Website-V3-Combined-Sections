@@ -91,12 +91,26 @@
   initSecurityShield();
 
   function initPawMedal() {
+    initHeroVideo();
     initStickyHeader();
     initLiveCustomizer();
     initProfileTabs();
     initFaqAccordion();
     initMobileNav();
     initSmoothScroll();
+  }
+
+  /* Hero Video Autoplay Assurance */
+  function initHeroVideo() {
+    var video = document.querySelector('.pm-hero-bg-video');
+    if (!video) return;
+    video.muted = true;
+    var playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(function () {
+        // Fallback poster image remains visible seamlessly
+      });
+    }
   }
 
   /* 0. Sticky Header Elevation */
