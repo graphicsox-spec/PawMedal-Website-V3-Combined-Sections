@@ -355,6 +355,7 @@ a {
   position: relative;
   width: 100%;
   aspect-ratio: 1920 / 900;
+  min-height: clamp(580px, 48vw, 820px);
   max-height: 900px;
   display: flex;
   align-items: center;
@@ -376,7 +377,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
+  object-position: 76% 56%;
   display: block;
 }
 
@@ -392,9 +393,10 @@ a {
 .pm-hero-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: clamp(30px, 4vw, 60px);
+  gap: clamp(20px, 3.5vw, 50px);
   align-items: center;
-  min-height: clamp(520px, 65vh, 700px);
+  min-height: auto;
+  padding: 30px 0;
 }
 
 .pm-hero-content {
@@ -561,31 +563,33 @@ a {
 
 /* Tag 1: Works with Apple (Top Right in forest/mountain background) */
 .pm-chip-apple {
-  top: 15%;
-  left: 82%;
+  top: 14%;
+  right: clamp(14px, 3vw, 46px);
+  left: auto;
   animation: pmFloat 5s ease-in-out infinite;
 }
 
 /* Tag 2: Unique Pet Profile (Top Left in clear mountain sky) */
 .pm-chip-profile {
-  top: 15%;
-  left: 46%;
+  top: 14%;
+  left: clamp(45%, 48vw, 52%);
   animation: pmFloat 5s ease-in-out infinite;
   animation-delay: 1.8s;
 }
 
 /* Tag 3: NFC & QR Tap (Mid Left in open meadow background) */
 .pm-chip-nfc {
-  top: 53%;
-  left: 45%;
+  top: 50%;
+  left: clamp(45%, 47vw, 51%);
   animation: pmFloat 5s ease-in-out infinite;
   animation-delay: 2.8s;
 }
 
 /* Tag 4: Light & Waterproof (Mid Right in pine forest background) */
 .pm-chip-waterproof {
-  top: 52%;
-  left: 82%;
+  top: 50%;
+  right: clamp(14px, 2.5vw, 40px);
+  left: auto;
   animation: pmFloat 5s ease-in-out infinite;
   animation-delay: 3.8s;
 }
@@ -593,8 +597,9 @@ a {
 /* Live Collar Beacon: Exactly below circular medal and centered */
 .pm-hero-collar-beacon {
   position: absolute;
-  left: calc(69.4% - 10px);
-  top: calc(88.2% + 15px);
+  left: 72.8%;
+  bottom: clamp(10px, 1.8vw, 20px);
+  top: auto;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
@@ -2254,24 +2259,80 @@ a {
 }
 
 /* ==========================================================================
-   RESPONSIVE BREAKPOINTS (Mobile & Tablet)
+   RESPONSIVE BREAKPOINTS (Laptop, Tablet & Mobile)
    ========================================================================== */
-@media (max-width: 1024px) {
+
+/* Laptop screens (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
   .pm-hero-section.pm-hero-fullbleed {
+    min-height: clamp(560px, 46vw, 680px);
+  }
+  .pm-hero-bg-video,
+  .pm-hero-bg-img {
+    object-position: 78% 58%;
+  }
+  .pm-hero-title {
+    font-size: clamp(36px, 4vw, 52px);
+  }
+  .pm-hero-lead {
+    font-size: 16px;
+  }
+  .pm-hero-collar-beacon {
+    left: 73%;
+    bottom: 12px;
+  }
+}
+
+/* Small Laptops & Tablets Landscape (881px - 1024px) */
+@media (min-width: 881px) and (max-width: 1024px) {
+  .pm-hero-section.pm-hero-fullbleed {
+    min-height: 560px;
     aspect-ratio: auto;
-    min-height: 540px;
-    padding: 50px 0;
   }
-
-  .pm-hero-dog-stage {
-    min-height: 320px;
+  .pm-hero-bg-video,
+  .pm-hero-bg-img {
+    object-position: 80% 55%;
   }
-
+  .pm-hero-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+  .pm-hero-title {
+    font-size: 36px;
+  }
+  .pm-hero-lead {
+    font-size: 14.5px;
+  }
+  .pm-hero-actions .pm-btn {
+    width: 170px;
+    height: 48px;
+    font-size: 13px;
+  }
   .pm-hero-floating-layer {
     display: none;
   }
+}
 
-  .pm-hero-grid,
+/* Header Nav responsiveness: prevent nav colliding with logo */
+@media (max-width: 1120px) {
+  .pm-nav {
+    gap: 16px;
+  }
+  .pm-nav a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 990px) {
+  .pm-nav {
+    display: none;
+  }
+  .pm-mobile-toggle {
+    display: block;
+  }
+}
+
+/* Tablet & Mobile Layout (<= 1024px) */
+@media (max-width: 1024px) {
   .pm-stats-grid,
   .pm-profile-grid,
   .pm-finder-grid,
@@ -2304,19 +2365,33 @@ a {
   }
 }
 
-@media (max-width: 768px) {
+/* Small Tablets & Large Phones (<= 880px) */
+@media (max-width: 880px) {
+  .pm-hero-section.pm-hero-fullbleed {
+    min-height: 520px;
+    aspect-ratio: auto;
+    padding: 40px 0;
+  }
+
+  .pm-hero-bg-video,
+  .pm-hero-bg-img {
+    object-position: 78% 50%;
+  }
+
+  .pm-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
   .pm-hero-dog-stage {
     display: none;
   }
 
-  .pm-nav {
+  .pm-hero-floating-layer {
     display: none;
   }
+}
 
-  .pm-mobile-toggle {
-    display: block;
-  }
-
+@media (max-width: 768px) {
   .pm-benefits-grid {
     grid-template-columns: 1fr;
   }
@@ -2331,6 +2406,33 @@ a {
 }
 
 @media (max-width: 640px) {
+  .pm-hero-section.pm-hero-fullbleed {
+    min-height: 520px;
+    padding: 34px 0 40px 0;
+  }
+
+  .pm-hero-section.pm-hero-fullbleed::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(180deg, rgba(250, 247, 242, 0.94) 0%, rgba(250, 247, 242, 0.82) 50%, rgba(250, 247, 242, 0.35) 100%);
+    pointer-events: none;
+  }
+
+  .pm-hero-bg-video,
+  .pm-hero-bg-img {
+    object-position: 80% 40%;
+  }
+
+  .pm-hero-title {
+    font-size: 32px;
+  }
+
+  .pm-hero-lead {
+    font-size: 14px;
+  }
+
   .pm-footer-grid,
   .pm-footer-top {
     grid-template-columns: 1fr;
