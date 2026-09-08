@@ -413,8 +413,8 @@ a {
 }
 
 .pm-hero-title {
-  font-size: clamp(38px, 4.6vw, 64px);
-  line-height: 1.08;
+  font-size: clamp(42px, 5.2vw, 72px);
+  line-height: 1.06;
   font-weight: 800;
   letter-spacing: -0.03em;
   color: var(--pm-dark);
@@ -597,7 +597,7 @@ a {
 /* Live Collar Beacon: Exactly below circular medal and centered */
 .pm-hero-collar-beacon {
   position: absolute;
-  left: 72.8%;
+  left: calc(72.8% - 25px);
   bottom: clamp(10px, 1.8vw, 20px);
   top: auto;
   transform: translateX(-50%);
@@ -2272,13 +2272,13 @@ a {
     object-position: 78% 58%;
   }
   .pm-hero-title {
-    font-size: clamp(36px, 4vw, 52px);
+    font-size: clamp(40px, 4.4vw, 58px);
   }
   .pm-hero-lead {
     font-size: 16px;
   }
   .pm-hero-collar-beacon {
-    left: 73%;
+    left: calc(73% - 25px);
     bottom: 12px;
   }
 }
