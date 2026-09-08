@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawMedal V2 — Personalized Smart Pet Tags & Apple Find My GPS</title>
+  <meta name="description" content="Discover PawMedal V2. Personalized luxury smart pet tags featuring Apple Find My global tracking, instant NFC & QR pet profiles, and aerospace aluminum construction.">
+  <link rel="icon" href="./assets/Favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./assets/Favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=format_color_reset">
+  <link rel="stylesheet" href="./assets/pawmedal.css">
+  <script>
+    /* PawMedal Security & IP Protection */
+    (function(){
+      document.addEventListener('contextmenu',function(e){e.preventDefault();return false;},true);
+      document.addEventListener('keydown',function(e){
+        var c=e.ctrlKey||e.metaKey,k=(e.key||'').toLowerCase(),code=e.keyCode||e.which;
+        if(code===123||k==='f12'||(c&&e.shiftKey&&(k==='i'||k==='j'||k==='c'||code===73||code===74||code===67))||(c&&(k==='u'||k==='s'||k==='p'||code===85||code===83||code===80))){
+          e.preventDefault();e.stopPropagation();return false;
+        }
+        if(c&&(k==='a'||k==='c'||code===65||code===67)){
+          var t=(document.activeElement&&document.activeElement.tagName)?document.activeElement.tagName.toLowerCase():'';
+          if(t!=='input'&&t!=='textarea'){e.preventDefault();return false;}
+        }
+      },true);
+      document.addEventListener('dragstart',function(e){
+        var t=(e.target&&e.target.tagName)?e.target.tagName.toLowerCase():'';
+        if(t==='img'||t==='svg'||t==='a'){e.preventDefault();return false;}
+      },true);
+    })();
+  </script>
+</head>
+<body class="pawmedal-v2-body">
+
+  <div style="background: #111111; color: #FAF7F2; text-align: center; padding: 9px 16px; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; display: flex; align-items: center; justify-content: center; gap: 8px;">
+    <img src="./assets/wand_shine_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="Wand" class="pm-wand-icon-gold" width="16" height="16" style="width: 16px; height: 16px; flex-shrink: 0;">
+    <span><span style="color: #E0B463;">Global Free Shipping</span> on all orders over €50 · 30-Day Money-Back Guarantee</span>
+  </div>
+
+  <header class="pm-header-bar">
+    <div class="pawmedal-wrap pm-header-inner">
+      <a href="#" class="pm-logo-link" aria-label="PawMedal Home">
+        <img src="./assets/PawMedal-Logo.svg" alt="PawMedal - Always Find Home" class="pm-logo-img">
+      </a>
+
+      <nav class="pm-nav">
+        <a href="#shop">Shop</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#finder-spotlight">Finder</a>
+        <a href="#construction">Engineering</a>
+        <a href="#comparison">Compare</a>
+        <a href="#design-studio">Design Yours</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="pm-header-actions">
+        <button type="button" class="pm-header-icon-btn" aria-label="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button type="button" class="pm-header-icon-btn" aria-label="Cart" style="position: relative;">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span style="position: absolute; top: 4px; right: 4px; width: 16px; height: 16px; border-radius: 50%; background: #C69746; color: #ffffff; font-size: 10px; font-weight: 800; display: flex; align-items: center; justify-content: center;">1</span>
+        </button>
+        <a href="#design-studio" class="pm-btn pm-btn-gold" style="padding: 10px 22px; font-size: 13px;">
+          Design Tag
+        </a>
+        <button type="button" class="pm-mobile-toggle" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- SECTION 01 · Hero -->
+    <section class="pm-hero-section pm-hero-fullbleed" id="pawmedal-hero">
+  <!-- Full-Bleed 1920x900 Panoramic Background Image (No Artificial Gradient) -->
+  <div class="pm-hero-bg-media">
+    <img 
+      src="./assets/pawmedal-hero-dog-tagged.jpg" 
+      alt="Dog wearing PawMedal Tag in nature" 
+      class="pm-hero-bg-img" 
+      width="1920" 
+      height="900" 
+      loading="eager"
+    >
+  </div>
+
+  <!-- Hero Content Layer -->
+  <div class="pawmedal-wrap pm-hero-container">
+    <div class="pm-hero-grid">
+      <!-- Left: Text Information -->
+      <div class="pm-hero-content">
+        <div class="pm-hero-eyebrow">
+          <span class="pm-pill-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            LOVE THEM. KEEP THEM CLOSE.
+          </span>
+        </div>
+
+        <h1 class="pm-hero-title">
+          Personalized<br>
+          smart tags<br>
+          <span class="highlight-gold">for your pet.</span>
+        </h1>
+
+        <p class="pm-hero-lead">
+          A smarter way to keep your pet safe. With Apple Find My,<br>
+          NFC and a unique digital pet profile, PawMedal helps you find,<br>
+          protect, and care for what matters most.
+        </p>
+
+        <div class="pm-hero-actions">
+          <a href="#design-studio" class="pm-btn pm-btn-gold">
+            Design My Tag
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#how-it-works" class="pm-btn pm-btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Watch Story
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Spacer for grid layout -->
+      <div class="pm-hero-dog-stage" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <!-- 4 Floating Badges around the Dog & Centered Medal Beacon (Pinned cleanly to hero coordinates) -->
+  <div class="pm-hero-floating-layer">
+    <!-- Tag 1: Works with Apple (Top Right, in forest background) -->
+    <div class="pm-floating-chip pm-chip-apple">
+      <div class="pm-chip-icon">
+        <i class="fa-brands fa-apple"></i>
+      </div>
+      <div class="pm-chip-title">Works with<br>Apple</div>
+    </div>
+
+    <!-- Tag 2: Unique Pet Profile (Top Left, in open mountain sky) -->
+    <div class="pm-floating-chip pm-chip-profile">
+      <div class="pm-chip-icon">
+        <svg class="pm-paw-icon" width="20" height="20" viewBox="0 0 90 88" fill="currentColor">
+          <circle cx="19" cy="29" r="9"/>
+          <circle cx="35.5" cy="14.5" r="9.5"/>
+          <circle cx="56.5" cy="14.5" r="9.5"/>
+          <circle cx="73" cy="29" r="9"/>
+          <path d="M46 36 C52 36 56 42 61 50 C66 58 75 58 75 64 C75 70 68 76 60 76 C53 76 49 71 46 71 C43 71 39 76 32 76 C24 76 17 70 17 64 C17 58 26 58 31 50 C36 42 40 36 46 36 Z"/>
+        </svg>
+      </div>
+      <div class="pm-chip-title">Unique<br>Pet Profile</div>
+    </div>
+
+    <!-- Tag 3: NFC & QR Tap (Mid Left, in open meadow background) -->
+    <div class="pm-floating-chip pm-chip-nfc">
+      <div class="pm-chip-icon">
+        <i class="fa-solid fa-qrcode"></i>
+      </div>
+      <div class="pm-chip-title">NFC &amp;<br>QR Tap</div>
+    </div>
+
+    <!-- Tag 4: Light & Waterproof (Mid Right, in pine forest background) -->
+    <div class="pm-floating-chip pm-chip-waterproof">
+      <div class="pm-chip-icon">
+        <img src="./assets/Waterproof_icon.svg" alt="Waterproof" class="pm-waterproof-svg-chip" width="18" height="23">
+      </div>
+      <div class="pm-chip-title">Light &amp;<br>Waterproof</div>
+    </div>
+
+    <!-- Live Collar Beacon: Exactly below the circular medal and centered -->
+    <div class="pm-hero-collar-beacon">
+      <div class="pm-beacon-badge">
+        <span class="dot"></span>
+        <span>PawMedal Active</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- SECTION 02 · Benefits -->
+    <section class="pm-benefits-section" id="pawmedal-benefits">
+  <div class="pawmedal-wrap">
+    <div class="pm-benefits-grid">
+      <div class="pm-benefit-card">
+        <div class="pm-benefit-icon-box">
+          <i class="fa-brands fa-apple"></i>
+        </div>
+        <div class="pm-benefit-text">
+          <h3>Works with Apple</h3>
+          <p>Global Find My device network</p>
+        </div>
+      </div>
+
+      <div class="pm-benefit-card">
+        <div class="pm-benefit-icon-box">
+          <i class="fa-solid fa-qrcode"></i>
+        </div>
+        <div class="pm-benefit-text">
+          <h3>NFC &amp; QR Tap</h3>
+          <p>Instant scan, zero app needed</p>
+        </div>
+      </div>
+
+      <div class="pm-benefit-card">
+        <div class="pm-benefit-icon-box">
+          <svg class="pm-paw-icon" width="24" height="24" viewBox="0 0 90 88" fill="currentColor">
+            <circle cx="19" cy="29" r="9"/>
+            <circle cx="35.5" cy="14.5" r="9.5"/>
+            <circle cx="56.5" cy="14.5" r="9.5"/>
+            <circle cx="73" cy="29" r="9"/>
+            <path d="M46 36 C52 36 56 42 61 50 C66 58 75 58 75 64 C75 70 68 76 60 76 C53 76 49 71 46 71 C43 71 39 76 32 76 C24 76 17 70 17 64 C17 58 26 58 31 50 C36 42 40 36 46 36 Z"/>
+          </svg>
+        </div>
+        <div class="pm-benefit-text">
+          <h3>Unique Pet Profile</h3>
+          <p>Medical, vaccine &amp; owner contacts</p>
+        </div>
+      </div>
+
+      <div class="pm-benefit-card">
+        <div class="pm-benefit-icon-box">
+          <img src="./assets/Waterproof_icon.svg" alt="Waterproof" class="pm-waterproof-svg-icon" width="22" height="28">
+        </div>
+        <div class="pm-benefit-text">
+          <h3>Light &amp; Waterproof</h3>
+          <p>IP68 submersible aviation build</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- SECTION 03 · Reconnection Context -->
+    <section class="pm-stats-section" id="reconnection">
+  <div class="pawmedal-wrap pm-stats-grid">
+    <div class="pm-stats-narrative">
+      <span class="pm-pill-badge">Why It Matters</span>
+      <h2 style="margin-top: 14px;">Every year, millions of pets go missing.</h2>
+      <p>
+        A lost pet can happen in seconds — a garden gate left ajar, an unexpected thunderstorm, or a sudden sprint in the park. 
+        Traditional engraved tags scratch, fade, and hold only a static number. PawMedal gives you a proactive, connected lifeline to dramatically increase the chances of a safe, rapid reunion.
+      </p>
+    </div>
+
+    <div class="pm-stats-cards-col">
+      <div class="pm-stat-box">
+        <div class="pm-stat-paw-badge">
+          <img src="./assets/PawFootPrint.svg" alt="Paw Footprint" width="56" height="56">
+        </div>
+        <div class="pm-stat-icon">
+          <i class="fa-solid fa-compass"></i>
+        </div>
+        <div class="pm-stat-number">10M+</div>
+        <div class="pm-stat-label">Pets go missing across Europe every single year.</div>
+      </div>
+
+      <div class="pm-stat-box">
+        <div class="pm-stat-paw-badge is-inverted">
+          <img src="./assets/PawFootPrint.svg" alt="Paw Footprint" width="56" height="56">
+        </div>
+        <div class="pm-stat-icon">
+          <i class="fa-solid fa-house-chimney-crack"></i>
+        </div>
+        <div class="pm-stat-number">8M+</div>
+        <div class="pm-stat-label">Are tragically never reunited due to outdated identification.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- SECTION 04 · Product Chooser -->
+    <section class="pm-chooser-section" id="shop">
+  <div class="pawmedal-wrap">
+    <div class="pm-section-header">
+      <span class="pm-pill-badge">Precision Protection</span>
+      <h2 style="margin-top: 12px;">Choose your PawMedal</h2>
+      <p>Select the smart security solution tailored to your companion's daily lifestyle.</p>
+    </div>
+
+    <div class="pm-products-grid">
+      <!-- Product 1: PawMedal Tag -->
+      <article class="pm-product-card">
+        <div class="pm-card-top">
+          <h3>PawMedal Tag</h3>
+          <div class="pm-card-subline">PERSONALIZED. STYLISH. SAFE.</div>
+        </div>
+
+        <div class="pm-card-media pm-card-media-tag">
+          <img src="./assets/01-pawtag2-1200.png" alt="PawMedal Tag personalized" width="400" height="400" loading="lazy">
+        </div>
+
+        <ul class="pm-card-features">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Personalized custom artwork
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Instant NFC &amp; Dynamic QR
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Lightweight &amp; waterproof durability
+          </li>
+        </ul>
+
+        <div class="pm-card-bottom">
+          <div class="pm-card-price-row">
+            <span class="price">€49.90</span>
+            <span class="subtext">One-time payment</span>
+          </div>
+          <a href="#design-studio" class="pm-btn pm-btn-secondary">
+            Design My Tag
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Product 2: PawMedal Finder -->
+      <article class="pm-product-card">
+        <div class="pm-card-top">
+          <h3>PawMedal Finder</h3>
+          <div class="pm-card-subline">TRACK. FIND. REUNITE.</div>
+        </div>
+
+        <div class="pm-card-media">
+          <img src="./assets/04-PawMedalFinder-1200.png" alt="PawMedal Finder" width="400" height="400" loading="lazy">
+        </div>
+
+        <ul class="pm-card-features">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Works with Apple Find My Network
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Up to 1 year replaceable battery
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            IP68 Submersible waterproof
+          </li>
+        </ul>
+
+        <div class="pm-card-bottom">
+          <div class="pm-card-price-row">
+            <span class="price">€79.90</span>
+            <span class="subtext">Zero subscription fees</span>
+          </div>
+          <a href="#finder-spotlight" class="pm-btn pm-btn-primary">
+            Explore Finder
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Product 3: PawMedal Bundle (Featured) -->
+      <article class="pm-product-card featured">
+        <div class="pm-card-badge">COMPLETE DEFENSE<br>BEST VALUE</div>
+
+        <div class="pm-card-top">
+          <h3>PawMedal Bundle</h3>
+          <div class="pm-card-subline">THE ULTIMATE PROTECTION</div>
+        </div>
+
+        <div class="pm-card-media pm-card-media-bundle">
+          <img src="./assets/01-pawtag2-1200.png" alt="PawMedal Tag" class="pm-bundle-img pm-bundle-tag" loading="lazy">
+          <img src="./assets/04-PawMedalFinder-1200.png" alt="PawMedal Finder" class="pm-bundle-img pm-bundle-finder" loading="lazy">
+        </div>
+
+        <ul class="pm-card-features">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Includes Personalized Tag + Smart Finder
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Apple Find My tracking + Instant NFC Profile
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Maximum safety &amp; full coverage for adventures
+          </li>
+        </ul>
+
+        <div class="pm-card-bottom">
+          <div class="pm-card-price-row">
+            <span class="price">€99.90</span>
+            <span class="subtext" style="color: #27AE60; font-weight: 700;">Save €29.90</span>
+          </div>
+          <a href="#design-studio" class="pm-btn pm-btn-gold">
+            Get The Bundle
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+    <!-- SECTION 05 · Digital Profile -->
+    <section class="pm-profile-section" id="how-it-works">
+  <div class="pawmedal-wrap pm-profile-grid">
+    <div class="pm-profile-content">
+      <span class="pm-pill-badge">Cloud Pet Profile</span>
+      <h2 style="margin-top: 14px;">More than a name and phone number.</h2>
+      <p class="lead">
+        Give your companion a living, secure digital profile. When anyone taps the tag with any smartphone, your pet's complete information opens instantly in their browser — no app download required.
+      </p>
+
+      <div class="pm-tab-buttons">
+        <div class="pm-tab-btn">
+          <div class="pm-tab-icon">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div class="pm-tab-info">
+            <h4>1-Tap Emergency Contact</h4>
+            <p>Direct call, WhatsApp, and alternate family numbers.</p>
+          </div>
+        </div>
+
+        <div class="pm-tab-btn">
+          <div class="pm-tab-icon">
+            <i class="fa-solid fa-notes-medical"></i>
+          </div>
+          <div class="pm-tab-info">
+            <h4>Medical &amp; Vaccine Records</h4>
+            <p>Critical allergies, microchip ID, and vet clinic details.</p>
+          </div>
+        </div>
+
+        <div class="pm-tab-btn">
+          <div class="pm-tab-icon">
+            <i class="fa-solid fa-bell"></i>
+          </div>
+          <div class="pm-tab-info">
+            <h4>Active Lost Mode</h4>
+            <p>Alerts finder that pet is lost, with reward details and instructions.</p>
+          </div>
+        </div>
+
+        <div class="pm-tab-btn">
+          <div class="pm-tab-icon">
+            <i class="fa-solid fa-location-crosshairs"></i>
+          </div>
+          <div class="pm-tab-info">
+            <h4>Instant Scan GPS Location</h4>
+            <p>Notifies you with an instant map pin the moment tag is scanned.</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="#design-studio" class="pm-btn pm-btn-primary">
+        Create Your Pet's Profile
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <!-- Authentic Phone Mockup Stage -->
+    <div class="pm-phone-stage">
+      <div class="pm-phone-mockup-wrap">
+        <img 
+          src="./assets/pawmedal-iphone17-transparent.png" 
+          alt="PawMedal Pet Profile on iPhone" 
+          class="pm-phone-mockup-img"
+          width="770" 
+          height="1580"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- SECTION 06 · Finder Spotlight -->
+    <section class="pm-finder-spotlight-section" id="finder-spotlight">
+  <div class="pawmedal-wrap pm-finder-grid">
+    <div class="pm-finder-content">
+      <span class="pm-pill-badge dark">Apple Find My Technology</span>
+      <h2 style="margin-top: 14px;">PawMedal Finder. Track what matters. No limits.</h2>
+      <p class="subhead">
+        Harnessing the immense security of Apple's global Find My network. When your dog or cat roams out of sight, millions of Apple devices worldwide silently collaborate to pinpoint your pet's precise location on your map.
+      </p>
+
+      <div class="pm-finder-features-grid">
+        <div class="pm-finder-f-box">
+          <div class="icon"><i class="fa-brands fa-apple"></i></div>
+          <h4>Apple Find My Certified</h4>
+          <p>Pairs natively with your iPhone, iPad, or Mac in under 30 seconds.</p>
+        </div>
+
+        <div class="pm-finder-f-box">
+          <div class="icon"><i class="fa-solid fa-ban"></i></div>
+          <h4>Zero Monthly Subscriptions</h4>
+          <p>No monthly SIM charges, no annual contracts, no hidden recurring fees.</p>
+        </div>
+
+        <div class="pm-finder-f-box">
+          <div class="icon"><i class="fa-solid fa-battery-full"></i></div>
+          <h4>1-Year Replaceable Battery</h4>
+          <p>Powered by standard user-replaceable CR2032 coin battery.</p>
+        </div>
+
+        <div class="pm-finder-f-box">
+          <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h4>IP68 Submersible Build</h4>
+          <p>Engineered for torrential rain, river swims, and muddy trails.</p>
+        </div>
+      </div>
+
+      <div class="pm-finder-actions">
+        <a href="#shop" class="pm-btn pm-btn-gold">
+          Order PawMedal Finder (€79.90)
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#construction" class="pm-btn pm-btn-outline-dark">
+          Explore Engineering
+        </a>
+      </div>
+    </div>
+
+    <!-- Visual Column -->
+    <div class="pm-finder-visual-col">
+      <div class="pm-finder-stage">
+        <div class="pm-finder-radar-bg">
+          <span class="pm-radar-wave pm-wave-1"></span>
+          <span class="pm-radar-wave pm-wave-2"></span>
+          <span class="pm-radar-wave pm-wave-3"></span>
+        </div>
+        <img src="./assets/pawmedal-finder-beach.png" alt="PawMedal Finder Hardware" class="pm-finder-large-img" width="500" height="500" loading="lazy">
+      </div>
+      
+      <div class="pm-finder-map-pill">
+        <span class="dot"></span>
+        <span>Find My Network Active · Signal 100%</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- SECTION 07 · Tag Construction -->
+    <section class="pm-construction-section" id="construction">
+  <div class="pawmedal-wrap">
+    <div class="pm-construction-header">
+      <span class="pm-pill-badge dark">Precision Craftsmanship</span>
+      <h2>The PawMedal Tag.<br>Built for a lifetime of adventure.</h2>
+      <p class="subhead">
+        Every PawMedal is engineered with the same precision as aerospace instruments.<br>Combining artisan jewelry aesthetics with military-grade resilience, it handles rigorous outdoor play with ease.
+      </p>
+    </div>
+
+    <div class="pm-construction-grid">
+      <div class="pm-exploded-view-card">
+        <img src="./assets/02-exploded-view-1200.png" alt="PawMedal Tag 3D Exploded Engineering View" class="pm-exploded-img" width="1200" height="1200" loading="lazy">
+      </div>
+
+      <div class="pm-construction-details">
+
+      <div class="pm-layers-list">
+        <div class="pm-layer-item">
+          <div class="pm-layer-number">1</div>
+          <div class="pm-layer-text">
+            <h4>Custom UV-Cured Art Face &amp; Plexi Shield</h4>
+            <p>Vibrant archival pigments sealed beneath crystal-clear, scratch-proof acrylic.</p>
+          </div>
+        </div>
+
+        <div class="pm-layer-item">
+          <div class="pm-layer-number">2</div>
+          <div class="pm-layer-text">
+            <h4>Sealed Passive NFC Chip &amp; Dynamic QR Matrix</h4>
+            <p>Completely passive RFID architecture — requires no charging, functioning indefinitely.</p>
+          </div>
+        </div>
+
+        <div class="pm-layer-item">
+          <div class="pm-layer-number">3</div>
+          <div class="pm-layer-text">
+            <h4>CNC-Milled Aerospace Aluminum Core</h4>
+            <p>Ultra-dense anodized alloy frame that resists heavy biting, drops, and abrasions.</p>
+          </div>
+        </div>
+
+        <div class="pm-layer-item">
+          <div class="pm-layer-number">4</div>
+          <div class="pm-layer-text">
+            <h4>Ergonomic Reinforced Attachment Eyelet</h4>
+            <p>Curved chamfered ring loop that securely anchors to all collar widths and harnesses.</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="#design-studio" class="pm-btn pm-btn-gold">
+        Design Your Custom Tag
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+</section>
+
+    <!-- SECTION 08 · Comparison Matrix -->
+    <section class="pm-comparison-section" id="comparison">
+  <div class="pawmedal-wrap">
+    <div class="pm-section-header pm-comparison-header">
+      <span class="pm-pill-badge">Direct Comparison</span>
+      <h2>Why choose PawMedal?<br>A clear difference.</h2>
+      <p>See why thousands of pet parents have replaced ordinary engraved metal tags with PawMedal.</p>
+    </div>
+
+    <div class="pm-comparison-card">
+      <table class="pm-comp-table">
+        <thead>
+          <tr>
+            <th>Security &amp; Safety Features</th>
+            <th>
+              <img src="./assets/05-PawMedalTag-1200.png" alt="Traditional Tag" class="pm-comp-thumb">
+              <div>Traditional Tag</div>
+            </th>
+            <th class="highlight-col">
+              <img src="./assets/01-pawtag2-1200.png" alt="PawMedal Tag" class="pm-comp-thumb">
+              <div>PawMedal Tag</div>
+            </th>
+            <th>
+              <img src="./assets/04-PawMedalFinder-1200.png" alt="PawMedal Finder" class="pm-comp-thumb">
+              <div>PawMedal Finder</div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Detailed Owner Contact Info</td>
+            <td><span class="pm-comp-check">✓</span></td>
+            <td class="highlight-col"><span class="pm-comp-check">✓</span></td>
+            <td><span class="pm-comp-check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Instant NFC Tap &amp; Dynamic QR Scan</td>
+            <td><span class="pm-comp-cross">✕</span></td>
+            <td class="highlight-col"><span class="pm-comp-check">✓</span></td>
+            <td><span class="pm-comp-check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Updateable Profile (Change phone/address anytime)</td>
+            <td><span class="pm-comp-cross">✕</span></td>
+            <td class="highlight-col"><span class="pm-comp-check">✓</span></td>
+            <td><span class="pm-comp-check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Emergency Medical &amp; Vaccination Records</td>
+            <td><span class="pm-comp-cross">✕</span></td>
+            <td class="highlight-col"><span class="pm-comp-check">✓</span></td>
+            <td><span class="pm-comp-check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Apple Find My Global Device Network</td>
+            <td><span class="pm-comp-cross">✕</span></td>
+            <td class="highlight-col"><span class="pm-comp-cross">✕</span></td>
+            <td><span class="pm-comp-check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Instant GPS Scan Notification to Owner</td>
+            <td><span class="pm-comp-cross">✕</span></td>
+            <td class="highlight-col"><span class="pm-comp-check">✓</span></td>
+            <td><span class="pm-comp-check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Zero Monthly Subscription Fees</td>
+            <td><span class="pm-comp-check">✓</span></td>
+            <td class="highlight-col"><span class="pm-comp-check">✓</span></td>
+            <td><span class="pm-comp-check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Submersible Waterproof &amp; Aviation Aluminum Core</td>
+            <td><span class="pm-comp-cross">✕</span></td>
+            <td class="highlight-col"><span class="pm-comp-check">✓</span></td>
+            <td><span class="pm-comp-check">✓</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+    <!-- SECTION 09 · Design Studio -->
+    <section class="pm-studio-section" id="design-studio">
+  <div class="pawmedal-wrap">
+    <div class="pm-section-header pm-studio-header">
+      <span class="pm-pill-badge">Interactive Design Studio</span>
+      <h2>Designed by artists.<br>Thoughtfully personalized just by you.</h2>
+      <p class="lead">
+        Select a handcrafted art piece from our Nordic and coastal collections, or type a custom AI prompt. Watch your companion's custom tag come alive instantly.
+      </p>
+    </div>
+
+    <div class="pm-studio-grid">
+      <div class="pm-studio-controls">
+        <div class="pm-customizer-box">
+          <!-- Step 1: Pet Name -->
+          <div class="pm-field-group">
+            <label for="pm-tag-name-input" class="pm-field-label">1. Enter Your Pet's Name</label>
+            <input type="text" id="pm-tag-name-input" class="pm-text-input" placeholder="e.g. Luna, Max, Bella" value="Luna" maxlength="15">
+          </div>
+
+          <!-- Step 2: Choose Art Collection -->
+          <div class="pm-field-group">
+            <span class="pm-field-label">2. Select Handcrafted Art Style</span>
+            <div class="pm-swatches-grid">
+              <div class="pm-swatch-item active" data-design="beach" data-tag-src="./assets/01-pawtag2-1200.png">
+                <div class="pm-swatch-circle">
+                  <img src="./assets/01-pawtag2-1200.png" alt="Lagoon Beach">
+                </div>
+                <span class="pm-swatch-name">Lagoon</span>
+              </div>
+
+              <div class="pm-swatch-item" data-design="city" data-tag-src="./assets/pawmedal-tag-stockholm.png">
+                <div class="pm-swatch-circle">
+                  <img src="./assets/pawmedal-tag-stockholm.png" alt="Stockholm">
+                </div>
+                <span class="pm-swatch-name">Stockholm</span>
+              </div>
+
+              <div class="pm-swatch-item" data-design="finder" data-tag-src="./assets/04-PawMedalFinder-1200.png">
+                <div class="pm-swatch-circle">
+                  <img src="./assets/04-PawMedalFinder-1200.png" alt="Finder Tag">
+                </div>
+                <span class="pm-swatch-name">Finder</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: AI Generator Prompt -->
+          <div class="pm-ai-prompt-box">
+            <span class="pm-field-label">Or Create with PawMedal AI</span>
+            <div class="pm-ai-input-wrap">
+              <input type="text" id="pm-ai-prompt-input" placeholder="e.g., A starry night sky over pine mountains..." value="A serene golden sunrise over mountain peaks...">
+              <button type="button" id="pm-ai-generate-btn" class="pm-btn pm-btn-primary" style="height: 46px;">
+                <img src="./assets/wand_shine_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="Wand" class="pm-wand-icon-btn" width="18" height="18">
+                Generate
+              </button>
+            </div>
+          </div>
+
+          <div style="margin-top: 24px; display: flex; align-items: center; justify-content: space-between;">
+            <div>
+              <span style="font-size: 13px; color: #888;">Custom Made:</span>
+              <div style="font-size: 24px; font-weight: 800; color: #111;">€49.90</div>
+            </div>
+            <a href="#shop" class="pm-btn pm-btn-gold">
+              Order This Design
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Interactive Tag Preview Stage -->
+      <div class="pm-studio-preview-col">
+        <div class="pm-tag-canvas-container">
+          <img id="pm-live-tag-image" src="./assets/01-pawtag2-1200.png" alt="Personalized PawMedal Tag Mockup" class="pm-tag-base-mockup" width="340" height="340">
+        </div>
+
+        <div class="pm-tag-live-pill">
+          <img src="./assets/wand_shine_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="Wand" class="pm-wand-icon-gold" width="18" height="18">
+          <span class="pm-engrave-label">Engraving:</span>
+          <span id="pm-live-tag-name" class="pm-tag-live-val">Luna</span>
+        </div>
+
+        <div class="pm-tag-preview-note">
+          <i class="fa-solid fa-gem" style="color: #C69746;"></i>
+          <span>Live Real-Time Preview · Hand-Assembled Finish</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- SECTION 10 · Reassurance -->
+    <section class="pm-reassurance-section" id="reassurance">
+  <div class="pawmedal-wrap">
+    <div class="pm-reassurance-card">
+      <div class="pm-reassurance-media">
+        <img src="./assets/Built Out Of Love.png" alt="Dog and cat together - Built Out Of Love" width="600" height="600" loading="lazy">
+      </div>
+
+      <div class="pm-reassurance-text">
+        <span class="pm-pill-badge">Built Out Of Love</span>
+        <h2 style="margin-top: 14px;">Because they're more than just pets. They're family.</h2>
+        <div class="pm-warm-quote">“Same love. More adventures together.”</div>
+        <p>
+          Whether your companion is lounging by the fireplace or exploring backcountry hiking trails, PawMedal delivers quiet, unbreakable confidence. We blend state-of-the-art Apple Find My connectivity with durable artisan craftsmanship so you can cherish every moment together without worry.
+        </p>
+
+        <a href="#faq" class="pm-btn pm-btn-primary">
+          View All Questions
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- SECTION 11 · FAQ & Contact -->
+    <section class="pm-faq-section" id="faq">
+  <div class="pawmedal-wrap pm-faq-grid">
+    <div class="pm-faq-sidebar">
+      <span class="pm-pill-badge">Clarity &amp; Support</span>
+      <h2 style="margin-top: 14px;">Frequently asked questions.</h2>
+      <p>Everything you need to know about PawMedal tags, Finder devices, and digital pet profiles.</p>
+
+      <div class="pm-support-box">
+        <div style="font-size: 24px; color: #C69746; margin-bottom: 8px;">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+        <h4>Still have a question?</h4>
+        <p>Our dedicated pet care specialists are ready to help you find the ideal protection.</p>
+        <a href="#contact" class="pm-btn pm-btn-primary" style="width: 100%;">
+          Contact Support
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="pm-accordion">
+      <!-- Q1 -->
+      <div class="pm-faq-item active">
+        <button type="button" class="pm-faq-trigger">
+          <span>Does PawMedal work worldwide?</span>
+          <span class="pm-faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="pm-faq-content">
+          <p>
+            Yes. The digital profile accessed via NFC and QR codes operates globally on any modern smartphone with internet access. 
+            For the PawMedal Finder, tracking works through Apple's worldwide Find My network across hundreds of millions of connected Apple devices in over 180 countries.
+          </p>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="pm-faq-item">
+        <button type="button" class="pm-faq-trigger">
+          <span>Do I need a monthly subscription?</span>
+          <span class="pm-faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="pm-faq-content">
+          <p>
+            No. PawMedal is 100% subscription-free. There are no monthly fees, no SIM activation charges, and no hidden subscriptions for accessing your pet's online profile or utilizing Apple Find My network features.
+          </p>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="pm-faq-item">
+        <button type="button" class="pm-faq-trigger">
+          <span>How long does the battery last?</span>
+          <span class="pm-faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="pm-faq-content">
+          <p>
+            The PawMedal Tag utilizes passive NFC and QR technology, requiring no battery or charging whatsoever — it works indefinitely. 
+            The PawMedal Finder is powered by a standard CR2032 coin battery that lasts up to one full year and can be easily replaced at home in seconds.
+          </p>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="pm-faq-item">
+        <button type="button" class="pm-faq-trigger">
+          <span>Is PawMedal waterproof?</span>
+          <span class="pm-faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="pm-faq-content">
+          <p>
+            Yes. Both the PawMedal Tag and PawMedal Finder are IP68 certified waterproof and hermetically sealed. Whether your dog loves diving into lakes, swimming in the ocean, or running through heavy rain and mud, PawMedal remains completely impervious to water.
+          </p>
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="pm-faq-item">
+        <button type="button" class="pm-faq-trigger">
+          <span>Can I update my pet's information after purchasing?</span>
+          <span class="pm-faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="pm-faq-content">
+          <p>
+            Absolutely. You can log into your PawMedal dashboard at any time to change phone numbers, update home addresses, add new medical/allergy records, or activate Lost Mode. The physical tag instantly links to your updated cloud profile without needing a replacement.
+          </p>
+        </div>
+      </div>
+
+      <!-- Q6 -->
+      <div class="pm-faq-item">
+        <button type="button" class="pm-faq-trigger">
+          <span>What if someone finds my pet?</span>
+          <span class="pm-faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="pm-faq-content">
+          <p>
+            Anyone who finds your pet simply holds their smartphone near the tag (NFC) or scans the discrete QR code with their camera. Your pet's profile opens instantly in their browser with 1-tap call and WhatsApp buttons, along with your safety instructions and medical alerts.
+          </p>
+        </div>
+      </div>
+
+      <!-- Q7 -->
+      <div class="pm-faq-item">
+        <button type="button" class="pm-faq-trigger">
+          <span>Is PawMedal compatible with Android?</span>
+          <span class="pm-faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="pm-faq-content">
+          <p>
+            Yes. Any Android smartphone with NFC or a camera can instantly scan and view your pet's PawMedal profile and contact you. For active location tracking on the PawMedal Finder, Apple Find My network requires an Apple device (iPhone, iPad, or Mac) to set up and monitor.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="pm-footer">
+    <div class="pawmedal-wrap">
+      <div class="pm-footer-grid">
+        <!-- Brand Column -->
+        <div class="pm-footer-brand">
+          <a href="#" class="pm-footer-logo-link" aria-label="PawMedal Home">
+            <img src="./assets/PawMedal-LogoV2.svg" alt="PawMedal" class="pm-footer-logo">
+          </a>
+          <p class="pm-footer-desc">
+            Elevating pet security with aerospace engineering, Apple Find My global connectivity, and timeless Scandinavian craftsmanship.
+          </p>
+          <div class="pm-footer-socials">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Products Column -->
+        <div class="pm-footer-col">
+          <h4 class="pm-footer-title">Products</h4>
+          <ul class="pm-footer-links">
+            <li><a href="#shop">PawMedal Tag</a></li>
+            <li><a href="#shop">PawMedal Finder</a></li>
+            <li><a href="#shop">Protection Bundle</a></li>
+            <li><a href="#design-studio">Artisan Series</a></li>
+            <li><a href="#design-studio">AI Customizer</a></li>
+          </ul>
+        </div>
+
+        <!-- Technology Column -->
+        <div class="pm-footer-col">
+          <h4 class="pm-footer-title">Technology</h4>
+          <ul class="pm-footer-links">
+            <li><a href="#how-it-works">Cloud Pet Profile</a></li>
+            <li><a href="#finder-spotlight">Apple Find My</a></li>
+            <li><a href="#construction">Exploded Pedestal</a></li>
+            <li><a href="#comparison">Compare Models</a></li>
+            <li><a href="#faq">Questions &amp; Answers</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Column -->
+        <div class="pm-footer-col pm-footer-newsletter-col">
+          <h4 class="pm-footer-title">Join The Pet Club</h4>
+          <p class="pm-footer-desc">
+            Get exclusive early access to limited artist releases and VIP pet safety updates.
+          </p>
+          <form class="pm-footer-form" onsubmit="event.preventDefault(); alert('Welcome to the PawMedal Pet Club!');">
+            <input type="email" placeholder="Your email address" required class="pm-footer-input">
+            <button type="submit" class="pm-btn pm-btn-gold pm-footer-submit">Join</button>
+          </form>
+          <div class="pm-footer-guarantee">
+            <i class="fa-solid fa-shield-check"></i> Zero spam · Unsubscribe anytime
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pm-footer-bottom">
+        <div class="pm-footer-copy">
+          © 2026 PawMedal. All rights reserved. Always Find Home.
+        </div>
+        <div class="pm-footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Shipping &amp; Returns</a>
+          <a href="#">Warranty</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/pawmedal.js"></script>
+</body>
+</html>

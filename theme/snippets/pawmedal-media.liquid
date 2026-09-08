@@ -1,0 +1,24 @@
+{% comment %}Original assets are fallbacks. Merchant-selected media use Shopify responsive CDN images.{% endcomment %}
+{% assign media_alt = alt | default: image.alt %}
+{% if mobile_image != blank %}
+  <picture>
+    <source media="(max-width: 749px)" srcset="{{ mobile_image | image_url: width: 900 }}">
+    {% if image != blank %}
+      {% if eager %}
+        {{ image | image_url: width: 1400 | image_tag: widths: '360,540,750,1000,1400', sizes: '(max-width: 749px) 90vw, 45vw', class: class, alt: media_alt, loading: 'eager', fetchpriority: 'high' }}
+      {% else %}
+        {{ image | image_url: width: 1200 | image_tag: widths: '360,540,750,1000,1200', sizes: '(max-width: 749px) 90vw, 45vw', class: class, alt: media_alt, loading: 'lazy' }}
+      {% endif %}
+    {% else %}
+      <img src="{{ fallback | asset_url }}" alt="{{ media_alt | escape }}" class="{{ class }}" width="{% if fallback == 'pawmedal-profile.webp' %}705{% elsif fallback == 'pawmedal-finder.webp' %}695{% elsif fallback == 'pawmedal-hero-dog.png' or fallback == 'pawmedal-hero-dog-tagged.jpg' %}1774{% else %}1100{% endif %}" height="{% if fallback == 'pawmedal-profile.webp' %}1500{% elsif fallback == 'pawmedal-finder.webp' %}770{% elsif fallback == 'pawmedal-construction.webp' %}733{% elsif fallback == 'pawmedal-hero-dog.png' or fallback == 'pawmedal-hero-dog-tagged.jpg' %}887{% else %}1100{% endif %}" {% if eager %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %}>
+    {% endif %}
+  </picture>
+{% elsif image != blank %}
+  {% if eager %}
+    {{ image | image_url: width: 1400 | image_tag: widths: '360,540,750,1000,1400', sizes: '(max-width: 749px) 90vw, 45vw', class: class, alt: media_alt, loading: 'eager', fetchpriority: 'high' }}
+  {% else %}
+    {{ image | image_url: width: 1200 | image_tag: widths: '360,540,750,1000,1200', sizes: '(max-width: 749px) 90vw, 45vw', class: class, alt: media_alt, loading: 'lazy' }}
+  {% endif %}
+{% elsif fallback != blank %}
+  <img src="{{ fallback | asset_url }}" alt="{{ media_alt | escape }}" class="{{ class }}" width="{% if fallback == 'pawmedal-profile.webp' %}705{% elsif fallback == 'pawmedal-finder.webp' %}695{% elsif fallback == 'pawmedal-hero-dog.png' or fallback == 'pawmedal-hero-dog-tagged.jpg' %}1774{% else %}1100{% endif %}" height="{% if fallback == 'pawmedal-profile.webp' %}1500{% elsif fallback == 'pawmedal-finder.webp' %}770{% elsif fallback == 'pawmedal-construction.webp' %}733{% elsif fallback == 'pawmedal-hero-dog.png' or fallback == 'pawmedal-hero-dog-tagged.jpg' %}887{% else %}1100{% endif %}" {% if eager %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %}>
+{% endif %}

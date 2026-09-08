@@ -1,0 +1,66 @@
+{
+  "sections": {
+    "hero": {
+      "type": "pawmedal-hero",
+      "settings": {
+        "eyebrow": "LOVE THEM. KEEP THEM CLOSE.",
+        "heading": "Personalized smart tag for your pet.",
+        "body": "A smarter way to keep your pet safe. With Apple Find My,\nNFC and a unique digital pet profile, PawMedal helps you find,\nprotect, and care for what matters most.",
+        "button_label": "Design My Tag"
+      }
+    },
+    "benefits": {
+      "type": "pawmedal-benefits",
+      "settings": {}
+    },
+    "statistics": {
+      "type": "pawmedal-statistics",
+      "settings": {}
+    },
+    "product_chooser": {
+      "type": "pawmedal-product-chooser",
+      "settings": {}
+    },
+    "profile": {
+      "type": "pawmedal-profile",
+      "settings": {}
+    },
+    "finder": {
+      "type": "pawmedal-finder",
+      "settings": {}
+    },
+    "construction": {
+      "type": "pawmedal-construction",
+      "settings": {}
+    },
+    "comparison": {
+      "type": "pawmedal-comparison",
+      "settings": {}
+    },
+    "design_studio": {
+      "type": "pawmedal-design-studio",
+      "settings": {}
+    },
+    "reassurance": {
+      "type": "pawmedal-reassurance",
+      "settings": {}
+    },
+    "faq": {
+      "type": "pawmedal-faq",
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero",
+    "benefits",
+    "statistics",
+    "product_chooser",
+    "profile",
+    "finder",
+    "construction",
+    "comparison",
+    "design_studio",
+    "reassurance",
+    "faq"
+  ]
+}

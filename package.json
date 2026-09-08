@@ -1,0 +1,21 @@
+{
+  "name": "pawmedal-website-v2",
+  "version": "2.0.0",
+  "description": "PawMedal V2 Next-Level Homepage - Shopify Impact Theme Section Package",
+  "main": "scripts/render-preview.cjs",
+  "scripts": {
+    "build": "node scripts/render-preview.cjs",
+    "serve": "node scripts/serve.cjs",
+    "qa": "node scripts/qa.cjs",
+    "theme-check": "shopify theme check --path theme --output json"
+  },
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^7.3.1",
+    "@playwright/test": "^1.63.0",
+    "@shopify/cli": "^4.7.1",
+    "liquidjs": "^10.29.0"
+  },
+  "private": true
+}

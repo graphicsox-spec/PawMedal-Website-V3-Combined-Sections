@@ -1,0 +1,46 @@
+[
+  {
+    "slug": "hero",
+    "name": "01 · Hero"
+  },
+  {
+    "slug": "benefits",
+    "name": "02 · Benefits"
+  },
+  {
+    "slug": "statistics",
+    "name": "03 · Reconnection Context"
+  },
+  {
+    "slug": "product-chooser",
+    "name": "04 · Product Chooser"
+  },
+  {
+    "slug": "profile",
+    "name": "05 · Digital Profile"
+  },
+  {
+    "slug": "finder",
+    "name": "06 · Finder Spotlight"
+  },
+  {
+    "slug": "construction",
+    "name": "07 · Tag Construction"
+  },
+  {
+    "slug": "comparison",
+    "name": "08 · Comparison Matrix"
+  },
+  {
+    "slug": "design-studio",
+    "name": "09 · Design Studio"
+  },
+  {
+    "slug": "reassurance",
+    "name": "10 · Reassurance"
+  },
+  {
+    "slug": "faq",
+    "name": "11 · FAQ & Contact"
+  }
+]

@@ -1,0 +1,84 @@
+<section class="pm-profile-section" id="how-it-works">
+  <div class="pawmedal-wrap pm-profile-grid">
+    <div class="pm-profile-content">
+      <span class="pm-pill-badge">Cloud Pet Profile</span>
+      <h2 style="margin-top: 14px;">More than a name and phone number.</h2>
+      <p class="lead">
+        Give your companion a living, secure digital profile. When anyone taps the tag with any smartphone, your pet's complete information opens instantly in their browser — no app download required.
+      </p>
+
+      <div class="pm-tab-buttons">
+        <div class="pm-tab-btn">
+          <div class="pm-tab-icon">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div class="pm-tab-info">
+            <h4>1-Tap Emergency Contact</h4>
+            <p>Direct call, WhatsApp, and alternate family numbers.</p>
+          </div>
+        </div>
+
+        <div class="pm-tab-btn">
+          <div class="pm-tab-icon">
+            <i class="fa-solid fa-notes-medical"></i>
+          </div>
+          <div class="pm-tab-info">
+            <h4>Medical &amp; Vaccine Records</h4>
+            <p>Critical allergies, microchip ID, and vet clinic details.</p>
+          </div>
+        </div>
+
+        <div class="pm-tab-btn">
+          <div class="pm-tab-icon">
+            <i class="fa-solid fa-bell"></i>
+          </div>
+          <div class="pm-tab-info">
+            <h4>Active Lost Mode</h4>
+            <p>Alerts finder that pet is lost, with reward details and instructions.</p>
+          </div>
+        </div>
+
+        <div class="pm-tab-btn">
+          <div class="pm-tab-icon">
+            <i class="fa-solid fa-location-crosshairs"></i>
+          </div>
+          <div class="pm-tab-info">
+            <h4>Instant Scan GPS Location</h4>
+            <p>Notifies you with an instant map pin the moment tag is scanned.</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="#design-studio" class="pm-btn pm-btn-primary">
+        Create Your Pet's Profile
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <!-- Authentic Phone Mockup Stage -->
+    <div class="pm-phone-stage">
+      <div class="pm-phone-mockup-wrap">
+        <img 
+          src="{{ 'pawmedal-iphone17-transparent.png' | asset_url }}" 
+          alt="PawMedal Pet Profile on iPhone" 
+          class="pm-phone-mockup-img"
+          width="770" 
+          height="1580"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "PawMedal Profile V2",
+  "settings": [],
+  "presets": [
+    {
+      "name": "PawMedal Profile V2"
+    }
+  ]
+}
+{% endschema %}

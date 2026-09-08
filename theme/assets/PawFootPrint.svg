@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 173.35 173.35">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ababab;
+      }
+
+      .cls-2 {
+        fill: #e4e4e4;
+      }
+    </style>
+  </defs>
+  <g id="complete_logo" data-name="complete logo">
+    <circle class="cls-2" cx="86.68" cy="86.68" r="86.68"/>
+    <g>
+      <path class="cls-1" d="M118.88,109.44c-4.42-6.19-10.27-12.94-15.93-20.19-5.66-7.25-8.31-12.55-16.27-12.55s-10.61,5.3-16.27,12.55c-5.66,7.25-11.51,14-15.93,20.19-4.42,6.19.72,18,13.1,16.41,12.38-1.59,16.62-1.77,19.1-1.77s6.72.18,19.1,1.77c12.38,1.59,17.52-10.22,13.1-16.41Z"/>
+      <circle class="cls-1" cx="55.21" cy="74.31" r="9.81"/>
+      <circle class="cls-1" cx="74.04" cy="57.17" r="9.81"/>
+      <circle class="cls-1" cx="118.14" cy="74.31" r="9.81"/>
+      <circle class="cls-1" cx="99.31" cy="57.17" r="9.81"/>
+    </g>
+  </g>
+</svg>

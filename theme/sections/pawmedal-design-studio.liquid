@@ -1,0 +1,103 @@
+<section class="pm-studio-section" id="design-studio">
+  <div class="pawmedal-wrap">
+    <div class="pm-section-header pm-studio-header">
+      <span class="pm-pill-badge">Interactive Design Studio</span>
+      <h2>Designed by artists.<br>Thoughtfully personalized just by you.</h2>
+      <p class="lead">
+        Select a handcrafted art piece from our Nordic and coastal collections, or type a custom AI prompt. Watch your companion's custom tag come alive instantly.
+      </p>
+    </div>
+
+    <div class="pm-studio-grid">
+      <div class="pm-studio-controls">
+        <div class="pm-customizer-box">
+          <!-- Step 1: Pet Name -->
+          <div class="pm-field-group">
+            <label for="pm-tag-name-input" class="pm-field-label">1. Enter Your Pet's Name</label>
+            <input type="text" id="pm-tag-name-input" class="pm-text-input" placeholder="e.g. Luna, Max, Bella" value="Luna" maxlength="15">
+          </div>
+
+          <!-- Step 2: Choose Art Collection -->
+          <div class="pm-field-group">
+            <span class="pm-field-label">2. Select Handcrafted Art Style</span>
+            <div class="pm-swatches-grid">
+              <div class="pm-swatch-item active" data-design="beach" data-tag-src="{{ '01-pawtag2-1200.png' | asset_url }}">
+                <div class="pm-swatch-circle">
+                  <img src="{{ '01-pawtag2-1200.png' | asset_url }}" alt="Lagoon Beach">
+                </div>
+                <span class="pm-swatch-name">Lagoon</span>
+              </div>
+
+              <div class="pm-swatch-item" data-design="city" data-tag-src="{{ 'pawmedal-tag-stockholm.png' | asset_url }}">
+                <div class="pm-swatch-circle">
+                  <img src="{{ 'pawmedal-tag-stockholm.png' | asset_url }}" alt="Stockholm">
+                </div>
+                <span class="pm-swatch-name">Stockholm</span>
+              </div>
+
+              <div class="pm-swatch-item" data-design="finder" data-tag-src="{{ '04-PawMedalFinder-1200.png' | asset_url }}">
+                <div class="pm-swatch-circle">
+                  <img src="{{ '04-PawMedalFinder-1200.png' | asset_url }}" alt="Finder Tag">
+                </div>
+                <span class="pm-swatch-name">Finder</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: AI Generator Prompt -->
+          <div class="pm-ai-prompt-box">
+            <span class="pm-field-label">Or Create with PawMedal AI</span>
+            <div class="pm-ai-input-wrap">
+              <input type="text" id="pm-ai-prompt-input" placeholder="e.g., A starry night sky over pine mountains..." value="A serene golden sunrise over mountain peaks...">
+              <button type="button" id="pm-ai-generate-btn" class="pm-btn pm-btn-primary" style="height: 46px;">
+                <img src="{{ 'wand_shine_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg' | asset_url }}" alt="Wand" class="pm-wand-icon-btn" width="18" height="18">
+                Generate
+              </button>
+            </div>
+          </div>
+
+          <div style="margin-top: 24px; display: flex; align-items: center; justify-content: space-between;">
+            <div>
+              <span style="font-size: 13px; color: #888;">Custom Made:</span>
+              <div style="font-size: 24px; font-weight: 800; color: #111;">€49.90</div>
+            </div>
+            <a href="#shop" class="pm-btn pm-btn-gold">
+              Order This Design
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Interactive Tag Preview Stage -->
+      <div class="pm-studio-preview-col">
+        <div class="pm-tag-canvas-container">
+          <img id="pm-live-tag-image" src="{{ '01-pawtag2-1200.png' | asset_url }}" alt="Personalized PawMedal Tag Mockup" class="pm-tag-base-mockup" width="340" height="340">
+        </div>
+
+        <div class="pm-tag-live-pill">
+          <img src="{{ 'wand_shine_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg' | asset_url }}" alt="Wand" class="pm-wand-icon-gold" width="18" height="18">
+          <span class="pm-engrave-label">Engraving:</span>
+          <span id="pm-live-tag-name" class="pm-tag-live-val">Luna</span>
+        </div>
+
+        <div class="pm-tag-preview-note">
+          <i class="fa-solid fa-gem" style="color: #C69746;"></i>
+          <span>Live Real-Time Preview · Hand-Assembled Finish</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "PawMedal Studio V2",
+  "settings": [],
+  "presets": [
+    {
+      "name": "PawMedal Studio V2"
+    }
+  ]
+}
+{% endschema %}

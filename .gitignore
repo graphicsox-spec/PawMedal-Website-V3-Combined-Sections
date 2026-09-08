@@ -1,0 +1,25 @@
+﻿node_modules/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.shopify/
+.cache/
+.DS_Store
+Thumbs.db
+*.log
+*.zip
+*.tmp
+
+# Root-level QA screenshots and test media
+/*.png
+/*.jpg
+/*.jpeg
+/*.webm
+/*.mp4
+
+# Test reports
+docs/qa/
+test-results/
+playwright-report/
