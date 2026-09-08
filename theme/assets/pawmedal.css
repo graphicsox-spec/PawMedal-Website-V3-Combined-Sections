@@ -1579,7 +1579,14 @@ a {
   border-radius: 50%;
   background: #EAF7EE;
   color: #27AE60;
-  font-size: 14px;
+  vertical-align: middle;
+}
+
+.pm-comp-check svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+  display: block;
 }
 
 .pm-comp-cross {
@@ -1591,7 +1598,14 @@ a {
   border-radius: 50%;
   background: #F5F5F7;
   color: #9E9EA7;
-  font-size: 13px;
+  vertical-align: middle;
+}
+
+.pm-comp-cross svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+  display: block;
 }
 
 /* ==========================================================================
