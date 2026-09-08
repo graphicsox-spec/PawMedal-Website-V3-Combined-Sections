@@ -572,7 +572,7 @@ a {
 /* Tag 2: Unique Pet Profile (Top Left in clear mountain sky) */
 .pm-chip-profile {
   top: 14%;
-  left: clamp(45%, 48vw, 52%);
+  left: calc(clamp(45%, 48vw, 52%) - 15px);
   animation: pmFloat 5s ease-in-out infinite;
   animation-delay: 1.8s;
 }
@@ -580,7 +580,7 @@ a {
 /* Tag 3: NFC & QR Tap (Mid Left in open meadow background) */
 .pm-chip-nfc {
   top: 50%;
-  left: clamp(45%, 47vw, 51%);
+  left: calc(clamp(45%, 47vw, 51%) - 15px);
   animation: pmFloat 5s ease-in-out infinite;
   animation-delay: 2.8s;
 }
