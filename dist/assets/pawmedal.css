@@ -597,7 +597,7 @@ a {
 /* Live Collar Beacon: Exactly below circular medal and centered */
 .pm-hero-collar-beacon {
   position: absolute;
-  left: calc(72.8% - 25px);
+  left: calc(72.8% - 50px);
   bottom: clamp(10px, 1.8vw, 20px);
   top: auto;
   transform: translateX(-50%);
@@ -2278,7 +2278,7 @@ a {
     font-size: 16px;
   }
   .pm-hero-collar-beacon {
-    left: calc(73% - 25px);
+    left: calc(73% - 50px);
     bottom: 12px;
   }
 }
