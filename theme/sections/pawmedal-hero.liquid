@@ -1,27 +1,14 @@
 <section class="pm-hero-section pm-hero-fullbleed" id="pawmedal-hero">
-  <!-- Full-Bleed 1920x900 Panoramic Background Video with Image Fallback -->
+  <!-- Full-Bleed 1920x900 Panoramic Background Image -->
   <div class="pm-hero-bg-media">
-    <video 
-      class="pm-hero-bg-video" 
-      autoplay 
-      loop 
-      muted 
-      playsinline 
-      webkit-playsinline 
-      poster="{{ 'pawmedal-hero-dog-tagged.jpg' | asset_url }}"
+    <img 
+      src="{{ 'pawmedal-hero-dog-tagged.jpg' | asset_url }}" 
+      alt="Dog wearing PawMedal Tag in nature" 
+      class="pm-hero-bg-img" 
       width="1920" 
-      height="900"
+      height="900" 
+      loading="eager"
     >
-      <source src="{{ 'pawmedal-hero-dog-tagged-video.mp4' | asset_url }}" type="video/mp4">
-      <img 
-        src="{{ 'pawmedal-hero-dog-tagged.jpg' | asset_url }}" 
-        alt="Dog wearing PawMedal Tag in nature" 
-        class="pm-hero-bg-img" 
-        width="1920" 
-        height="900" 
-        loading="eager"
-      >
-    </video>
   </div>
 
   <!-- Hero Content Layer -->
