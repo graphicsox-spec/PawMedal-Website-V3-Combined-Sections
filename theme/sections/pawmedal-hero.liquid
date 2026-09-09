@@ -1,115 +1,204 @@
 <section class="pm-hero-section pm-hero-fullbleed" id="pawmedal-hero">
-  <!-- Full-Bleed 1920x900 Panoramic Background Video with Image Fallback -->
+  <!-- Full-Bleed Panoramic Background Video & Fallback Image -->
   <div class="pm-hero-bg-media">
-    <video 
-      class="pm-hero-bg-video" 
-      autoplay 
-      loop 
-      muted 
-      playsinline 
-      webkit-playsinline 
-      poster="{{ 'pawmedal-hero-dog-tagged.jpg' | asset_url }}" 
+    <img 
+      src="{{ 'header-v2.png' | asset_url }}" 
+      alt="Dog wearing PawMedal in nature" 
+      class="pm-hero-bg-img" 
       width="1920" 
-      height="900"
+      height="1080" 
+      loading="eager"
     >
-      <source src="{{ 'pawmedal-hero-dog-tagged-videoV3.mp4' | asset_url }}" type="video/mp4">
-      <img 
-        src="{{ 'pawmedal-hero-dog-tagged.jpg' | asset_url }}" 
-        alt="Dog wearing PawMedal Tag in nature" 
-        class="pm-hero-bg-img" 
-        width="1920" 
-        height="900" 
-        loading="eager"
-      >
+    <video
+      class="pm-hero-bg-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      poster="{{ 'header-v2.png' | asset_url }}"
+      width="1920"
+      height="1080"
+    >
+      <source src="{{ 'website-hero-video-v4.mp4' | asset_url }}" type="video/mp4">
     </video>
   </div>
 
   <!-- Hero Content Layer -->
   <div class="pawmedal-wrap pm-hero-container">
     <div class="pm-hero-grid">
-      <!-- Left: Text Information -->
+      <!-- Left: Text Information & Product Switcher -->
       <div class="pm-hero-content">
         <div class="pm-hero-eyebrow">
-          <span class="pm-pill-badge">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            {{ section.settings.eyebrow | default: "Love Them. Keep Them Close." }}
-          </span>
+          <img src="{{ 'Favicon.svg' | asset_url }}" alt="PawMedal Paw" class="pm-eyebrow-icon" width="16" height="16">
+          <span class="pm-eyebrow-text">Love them, Keep them Close.</span>
         </div>
 
-        <h1 class="pm-hero-title">
-          Personalized<br>
-          Smart Tags<br>
-          <span class="highlight-gold">For Your Pet.</span>
-        </h1>
+        <!-- Product Switcher (Finder vs Tag) -->
+        <div class="pm-hero-switcher-wrap">
+          <div class="pm-hero-product-switcher" role="tablist" aria-label="Select PawMedal Model">
+            <button type="button" class="pm-switch-btn active" data-product="finder" role="tab" aria-selected="true" aria-controls="pm-hero-finder-view">
+              <img src="{{ 'finder-switcher-thumb.png' | asset_url }}" alt="Finder Medal" class="pm-switch-thumb" width="28" height="28">
+              <span class="pm-switch-name">PawMedal Finder</span>
+            </button>
+            <button type="button" class="pm-switch-btn" data-product="tag" role="tab" aria-selected="false" aria-controls="pm-hero-tag-view">
+              <img src="{{ 'tag-switcher-thumb.png' | asset_url }}" alt="Tag Medal" class="pm-switch-thumb" width="28" height="28">
+              <span class="pm-switch-name">PawMedal Tags</span>
+            </button>
+          </div>
+        </div>
 
-        <p class="pm-hero-lead">
-          A smarter way to keep your pet safe. With Apple Find My,<br>
-          NFC and a unique digital pet profile, PawMedal helps you find,<br>
-          protect, and care for what matters most.
-        </p>
+        <!-- Finder View (Active by default) -->
+        <div class="pm-hero-product-view active" id="pm-hero-finder-view" data-product-view="finder">
+          <h1 class="pm-hero-title">
+            Personalized<br>
+            Smart Finder<br>
+            <span class="highlight-gold">For Your Pet.</span>
+          </h1>
 
-        <div class="pm-hero-actions">
-          <a href="#design-studio" class="pm-btn pm-btn-gold">
-            {{ section.settings.button_label | default: "Design My Tag" }}
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a href="#how-it-works" class="pm-btn pm-btn-secondary">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            Watch Story
-          </a>
+          <p class="pm-hero-lead">
+            With Apple Find My and Android GPS networks,<br class="pm-break-desktop">
+            PawMedal Finder helps you find, protect, and care<br class="pm-break-desktop">
+            for your pet, delivering real-time location<br class="pm-break-desktop">
+            peace of mind, anywhere in the world.
+          </p>
+
+          <div class="pm-hero-actions">
+            <a href="#design-studio" class="pm-btn pm-btn-gold">
+              Design My Finder
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#finder-spotlight" class="pm-btn pm-btn-white-play">
+              <span class="pm-play-triangle">▶</span>
+              Explore GPS Tech
+            </a>
+          </div>
+
+          <!-- Feature Icons Row (Finder: 5 items) -->
+          <div class="pm-feature-icons-row" id="pm-finder-badges">
+            <div class="pm-feature-icon-item">
+              <div class="pm-feature-icon-circle">
+                <img src="{{ 'apple-find-my-icon_1.svg' | asset_url }}" alt="Works With Apple Find My" class="pm-feat-svg" width="28" height="28" loading="eager">
+              </div>
+              <span class="pm-feature-icon-label">Works With<br>Apple Find My</span>
+            </div>
+
+            <div class="pm-feature-icon-item">
+              <div class="pm-feature-icon-circle">
+                <img src="{{ 'google-find-my-device-icon.svg' | asset_url }}" alt="Works With Google Find Hub" class="pm-feat-svg pm-feat-app" width="30" height="30" loading="eager">
+              </div>
+              <span class="pm-feature-icon-label">Works With<br>Google Find Hub</span>
+            </div>
+
+            <div class="pm-feature-icon-item">
+              <div class="pm-feature-icon-circle">
+                <img src="{{ 'real-time-tracking-icon.svg' | asset_url }}" alt="Real-Time Tracking" class="pm-feat-svg" width="26" height="26" loading="eager">
+              </div>
+              <span class="pm-feature-icon-label">Real-Time<br>Tracking</span>
+            </div>
+
+            <div class="pm-feature-icon-item">
+              <div class="pm-feature-icon-circle">
+                <img src="{{ 'global-coverage_1.svg' | asset_url }}" alt="Global Coverage" class="pm-feat-svg" width="26" height="26" loading="eager">
+              </div>
+              <span class="pm-feature-icon-label">Global<br>Coverage</span>
+            </div>
+
+            <div class="pm-feature-icon-item">
+              <div class="pm-feature-icon-circle">
+                <img src="{{ 'no-monthly-stress_1.svg' | asset_url }}" alt="No Monthly Stress" class="pm-feat-svg" width="24" height="24" loading="eager">
+              </div>
+              <span class="pm-feature-icon-label">No Monthly<br>Stress</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tag View -->
+        <div class="pm-hero-product-view" id="pm-hero-tag-view" data-product-view="tag">
+          <h1 class="pm-hero-title">
+            Personalized<br>
+            Smart Tags<br>
+            <span class="highlight-gold">For Your Pet.</span>
+          </h1>
+
+          <p class="pm-hero-lead">
+            A smarter way to keep your pet safe. With instant NFC<br class="pm-break-desktop">
+            tap, QR backup, and a unique digital pet profile,<br class="pm-break-desktop">
+            PawMedal helps you find, protect, and reconnect your<br class="pm-break-desktop">
+            pet with zero subscriptions.
+          </p>
+
+          <div class="pm-hero-actions">
+            <a href="#design-studio" class="pm-btn pm-btn-gold">
+              {{ section.settings.button_label | default: "Design My Tag" }}
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#how-it-works" class="pm-btn pm-btn-white-play">
+              <span class="pm-play-triangle">▶</span>
+              Watch Story
+            </a>
+          </div>
+
+          <!-- Feature Icons Row (Tag: 4 items) -->
+          <div class="pm-feature-icons-row" id="pm-tag-badges">
+            <div class="pm-feature-icon-item">
+              <div class="pm-feature-icon-circle">
+                <img src="{{ 'nfc-scan-icon.svg' | asset_url }}" alt="Instant NFC and QR Scan" class="pm-feat-svg" width="24" height="24" loading="eager">
+              </div>
+              <span class="pm-feature-icon-label">Instant NFC<br>and QR Scan</span>
+            </div>
+
+            <div class="pm-feature-icon-item">
+              <div class="pm-feature-icon-circle">
+                <img src="{{ 'pet-profile-icon.svg' | asset_url }}" alt="Digital Pet Profile" class="pm-feat-svg" width="26" height="26" loading="eager">
+              </div>
+              <span class="pm-feature-icon-label">Digital<br>Pet Profile</span>
+            </div>
+
+            <div class="pm-feature-icon-item">
+              <div class="pm-feature-icon-circle">
+                <img src="{{ 'share-icon.svg' | asset_url }}" alt="Easy to Share" class="pm-feat-svg" width="24" height="24" loading="eager">
+              </div>
+              <span class="pm-feature-icon-label">Easy to<br>Share</span>
+            </div>
+
+            <div class="pm-feature-icon-item">
+              <div class="pm-feature-icon-circle">
+                <img src="{{ 'no-monthly-stress_1.svg' | asset_url }}" alt="Zero Subscriptions" class="pm-feat-svg" width="24" height="24" loading="eager">
+              </div>
+              <span class="pm-feature-icon-label">Zero<br>Subscriptions</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Right: Spacer for grid layout -->
-      <div class="pm-hero-dog-stage" aria-hidden="true"></div>
-    </div>
-  </div>
-
-  <!-- 4 Floating Badges around the Dog & Centered Medal Beacon (Pinned cleanly to hero coordinates) -->
-  <div class="pm-hero-floating-layer">
-    <!-- Tag 1: Works with Apple (Top Right, in forest background) -->
-    <div class="pm-floating-chip pm-chip-apple">
-      <div class="pm-chip-icon">
-        <i class="fa-brands fa-apple"></i>
-      </div>
-      <div class="pm-chip-title">Works with<br>Apple</div>
-    </div>
-
-    <!-- Tag 2: Unique Pet Profile (Top Left, in open mountain sky) -->
-    <div class="pm-floating-chip pm-chip-profile">
-      <div class="pm-chip-icon">
-        <svg class="pm-paw-icon" width="20" height="20" viewBox="0 0 90 88" fill="currentColor">
-          <circle cx="19" cy="29" r="9"/>
-          <circle cx="35.5" cy="14.5" r="9.5"/>
-          <circle cx="56.5" cy="14.5" r="9.5"/>
-          <circle cx="73" cy="29" r="9"/>
-          <path d="M46 36 C52 36 56 42 61 50 C66 58 75 58 75 64 C75 70 68 76 60 76 C53 76 49 71 46 71 C43 71 39 76 32 76 C24 76 17 70 17 64 C17 58 26 58 31 50 C36 42 40 36 46 36 Z"/>
-        </svg>
-      </div>
-      <div class="pm-chip-title">Unique<br>Pet Profile</div>
-    </div>
-
-    <!-- Tag 3: NFC & QR Tap (Mid Left, in open meadow background) -->
-    <div class="pm-floating-chip pm-chip-nfc">
-      <div class="pm-chip-icon">
-        <i class="fa-solid fa-qrcode"></i>
-      </div>
-      <div class="pm-chip-title">NFC &amp;<br>QR Tap</div>
-    </div>
-
-    <!-- Tag 4: Light & Waterproof (Mid Right, in pine forest background) -->
-    <div class="pm-floating-chip pm-chip-waterproof">
-      <div class="pm-chip-icon">
-        <img src="{{ 'Waterproof_icon.svg' | asset_url }}" alt="Waterproof" class="pm-waterproof-svg-chip" width="18" height="23">
-      </div>
-      <div class="pm-chip-title">Light &amp;<br>Waterproof</div>
-    </div>
-
-    <!-- Live Collar Beacon: Exactly below the circular medal and centered -->
-    <div class="pm-hero-collar-beacon">
-      <div class="pm-beacon-badge">
-        <span class="dot"></span>
-        <span>PawMedal Active</span>
+      <!-- Right: Dog Stage with iPhone Digital Profile -->
+      <div class="pm-hero-dog-stage">
+        <!-- Dog's Digital Pet Profile on iPhone (Next to the Dog) -->
+        <div class="pm-hero-phone-container">
+          <div class="pm-phone-preview-card">
+            <div class="pm-phone-mockup-wrap">
+              <img 
+                src="{{ 'pawmedal-iphone17-finder.png' | asset_url }}" 
+                alt="PawMedal Finder displayed on iPhone" 
+                class="pm-hero-phone-img pm-phone-finder active" 
+                id="pm-hero-phone-finder"
+                width="385" 
+                height="790" 
+                loading="eager"
+              >
+              <img 
+                src="{{ 'pawmedal-iphone17-transparent.png' | asset_url }}" 
+                alt="PawMedal Digital Pet Profile displayed on iPhone next to dog" 
+                class="pm-hero-phone-img pm-phone-tag" 
+                id="pm-hero-phone-tag"
+                width="385" 
+                height="790" 
+                loading="eager"
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

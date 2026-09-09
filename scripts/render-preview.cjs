@@ -86,9 +86,15 @@ const sections = JSON.parse(fs.readFileSync(path.join(__dirname, 'sections.json'
 </head>
 <body class="pawmedal-v2-body">
 
-  <div style="background: #111111; color: #FAF7F2; text-align: center; padding: 9px 16px; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; display: flex; align-items: center; justify-content: center; gap: 8px;">
-    <img src="./assets/wand_shine_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="Wand" class="pm-wand-icon-gold" width="16" height="16" style="width: 16px; height: 16px; flex-shrink: 0;">
-    <span><span style="color: #E0B463;">Global Free Shipping</span> on all orders over €50 · 30-Day Money-Back Guarantee</span>
+  <div style="background: #111111; color: #FAF7F2; text-align: center; padding: 9px 16px; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px 24px;">
+    <div style="display: inline-flex; align-items: center; gap: 8px;">
+      <img src="./assets/shipping-icon.svg" alt="Shipping" class="pm-shipping-icon-gold" width="18" height="15" style="width: 18px; height: 15px; flex-shrink: 0;">
+      <span><span style="color: #E0B463;">Global Free Shipping</span> on all orders over €50</span>
+    </div>
+    <div style="display: inline-flex; align-items: center; gap: 8px;">
+      <img src="./assets/guaranty-shield-icon.svg" alt="Guarantee" class="pm-guaranty-icon-gold" width="14" height="16" style="width: 14px; height: 16px; flex-shrink: 0;">
+      <span>30-Day Money-Back Guarantee</span>
+    </div>
   </div>
 
   <header class="pm-header-bar">
@@ -208,6 +214,8 @@ ${body}
 </html>`;
 
   // Always sync theme/assets to preview/assets
+  fs.rmSync(path.join(root, 'preview/assets'), { recursive: true, force: true });
+  fs.mkdirSync(path.join(root, 'preview/assets'), { recursive: true });
   fs.cpSync(path.join(root, 'theme/assets'), path.join(root, 'preview/assets'), { recursive: true });
 
   fs.writeFileSync(path.join(root, 'preview/index.html'), doc, 'utf8');
@@ -222,6 +230,7 @@ ${body}
 
   // Also sync docs/ for GitHub Pages /docs folder support
   const docs = path.join(root, 'docs');
+  fs.rmSync(docs, { recursive: true, force: true });
   fs.mkdirSync(path.join(docs, 'assets'), { recursive: true });
   fs.writeFileSync(path.join(docs, 'index.html'), doc, 'utf8');
   fs.writeFileSync(path.join(docs, '.nojekyll'), '', 'utf8');

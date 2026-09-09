@@ -92,6 +92,7 @@
 
   function initPawMedal() {
     initHeroVideo();
+    initHeroProductSwitcher();
     initStickyHeader();
     initLiveCustomizer();
     initProfileTabs();
@@ -252,7 +253,51 @@
     }
   }
 
-  /* 5. Smooth Anchor Scroll */
+  /* 5. Hero Product Switcher (Finder vs Tag) */
+  function initHeroProductSwitcher() {
+    var switchBtns = document.querySelectorAll('.pm-switch-btn');
+    var finderView = document.getElementById('pm-hero-finder-view');
+    var tagView = document.getElementById('pm-hero-tag-view');
+    var finderBadges = document.getElementById('pm-finder-badges');
+    var tagBadges = document.getElementById('pm-tag-badges');
+    var phoneFinder = document.getElementById('pm-hero-phone-finder');
+    var phoneTag = document.getElementById('pm-hero-phone-tag');
+
+    if (!switchBtns.length) return;
+
+    switchBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var product = this.getAttribute('data-product');
+
+        // Update switcher buttons active state
+        switchBtns.forEach(function (b) {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        this.classList.add('active');
+        this.setAttribute('aria-selected', 'true');
+
+        // Toggle content views & iPhone mockup
+        if (product === 'finder') {
+          if (finderView) finderView.classList.add('active');
+          if (tagView) tagView.classList.remove('active');
+          if (finderBadges) finderBadges.classList.add('active');
+          if (tagBadges) tagBadges.classList.remove('active');
+          if (phoneFinder) phoneFinder.classList.add('active');
+          if (phoneTag) phoneTag.classList.remove('active');
+        } else {
+          if (tagView) tagView.classList.add('active');
+          if (finderView) finderView.classList.remove('active');
+          if (tagBadges) tagBadges.classList.add('active');
+          if (finderBadges) finderBadges.classList.remove('active');
+          if (phoneTag) phoneTag.classList.add('active');
+          if (phoneFinder) phoneFinder.classList.remove('active');
+        }
+      });
+    });
+  }
+
+  /* 6. Smooth Anchor Scroll */
   function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
       anchor.addEventListener('click', function (e) {

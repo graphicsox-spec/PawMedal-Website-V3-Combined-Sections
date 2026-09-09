@@ -28,12 +28,13 @@
 
 :root {
   /* Brand Palette */
+  --pm-brand-black: #111111;
   --pm-gold: #C69746;
   --pm-gold-light: #E0B463;
   --pm-gold-glow: rgba(198, 151, 70, 0.18);
   --pm-gold-subtle: rgba(198, 151, 70, 0.08);
 
-  --pm-dark: #0F1012;
+  --pm-dark: #111111;
   --pm-dark-surface: #17181C;
   --pm-dark-card: #1F2126;
   --pm-dark-border: rgba(255, 255, 255, 0.08);
@@ -42,7 +43,7 @@
   --pm-cream-surface: #F3EFEA;
   --pm-white: #FFFFFF;
 
-  --pm-text-main: #1A1A1A;
+  --pm-text-main: #111111;
   --pm-text-muted: #666666;
   --pm-text-light: #999999;
   --pm-text-on-dark: #F5F5F7;
@@ -248,6 +249,14 @@ a {
   color: #E2BC72;
 }
 
+.pm-pill-badge .pm-eyebrow-icon {
+  width: auto;
+  height: 15px;
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
 /* ==========================================================================
    SITE HEADER & NAVIGATION
    ========================================================================== */
@@ -332,7 +341,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--pm-text-main);
+  color: var(--pm-brand-black);
   background: rgba(0, 0, 0, 0.03);
   transition: all 0.2s ease;
 }
@@ -346,6 +355,7 @@ a {
   display: none;
   font-size: 24px;
   padding: 8px;
+  color: var(--pm-brand-black);
 }
 
 /* ==========================================================================
@@ -354,31 +364,43 @@ a {
 .pm-hero-section.pm-hero-fullbleed {
   position: relative;
   width: 100%;
-  aspect-ratio: 1920 / 900;
-  min-height: clamp(580px, 48vw, 820px);
-  max-height: 900px;
+  min-height: clamp(609px, 46.9vw, 771px);
   display: flex;
   align-items: center;
   overflow: hidden;
   background-color: var(--pm-cream);
+  padding: clamp(16px, 1.8vw, 28px) 0 clamp(22px, 2.5vw, 36px) 0;
 }
 
 .pm-hero-bg-media {
   position: absolute;
   inset: 0;
   width: 100%;
+  left: 0;
   height: 100%;
   z-index: 1;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .pm-hero-bg-img,
 .pm-hero-bg-video {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 76% 56%;
+  object-position: center bottom;
   display: block;
+  transform: none;
+}
+
+.pm-hero-bg-img {
+  z-index: 1;
+}
+
+.pm-hero-bg-video {
+  z-index: 2;
 }
 
 .pm-hero-container {
@@ -392,18 +414,18 @@ a {
 
 .pm-hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: clamp(20px, 3.5vw, 50px);
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: clamp(16px, 2.5vw, 36px);
   align-items: center;
   min-height: auto;
-  padding: 30px 0;
+  padding: clamp(16px, 2vw, 24px) 0;
 }
 
 .pm-hero-content {
   display: flex;
   flex-direction: column;
-  gap: 22px;
-  max-width: 600px;
+  gap: 20px;
+  max-width: 550px;
 }
 
 .pm-hero-eyebrow {
@@ -426,25 +448,35 @@ a {
 }
 
 .pm-hero-lead {
-  font-size: clamp(16px, 1.25vw, 19px);
+  font-size: clamp(15px, 1.12vw, 17px);
   color: #4A4A4F;
-  line-height: 1.65;
-  max-width: 580px;
+  line-height: 1.55;
+  max-width: 540px;
 }
 
 .pm-hero-actions {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
   margin-top: 8px;
 }
 
 .pm-hero-actions .pm-btn {
-  width: 190px;
+  width: 204px;
   height: 52px;
-  padding: 0 20px;
+  padding: 0 16px;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 700;
+  box-sizing: border-box;
+  text-decoration: none;
+  border-radius: var(--pm-radius-pill);
+  gap: 8px;
+  flex-shrink: 0;
 }
 
 .pm-hero-trust {
@@ -476,8 +508,285 @@ a {
 }
 
 /* ==========================================================================
-   HERO FLOATING CHIPS LAYER (4 Concise 2-Line Badges Around Dog + Centered Collar Beacon)
+   HERO PRODUCT SWITCHER (Finder vs Tag)
    ========================================================================== */
+.pm-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.pm-hero-eyebrow .pm-eyebrow-icon {
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  object-fit: contain;
+}
+
+.pm-hero-switcher-wrap {
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+.pm-hero-product-switcher {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--pm-radius-pill);
+  padding: 4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  gap: 4px;
+}
+
+.pm-switch-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 18px 6px 8px;
+  border-radius: var(--pm-radius-pill);
+  border: none;
+  background: transparent;
+  color: var(--pm-brand-black);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.pm-switch-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.pm-switch-btn.active {
+  background: #C69746;
+  color: #FFFFFF;
+  box-shadow: 0 3px 12px rgba(198, 151, 70, 0.35);
+}
+
+.pm-switch-btn:not(.active):hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+/* Hero Product Views (Finder vs Tag) */
+.pm-hero-product-view {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  animation: pmFadeIn 0.35s ease forwards;
+}
+
+.pm-hero-product-view.active {
+  display: flex;
+}
+
+@keyframes pmFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   HERO DOG STAGE (iPhone Digital Profile + Compatibility Logos below Product)
+   ========================================================================== */
+.pm-hero-dog-stage {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 480px;
+  pointer-events: none;
+}
+
+.pm-hero-phone-container {
+  pointer-events: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-right: auto;
+  margin-left: 0;
+  transform: none;
+  z-index: 9;
+}
+
+.pm-phone-preview-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.4s ease;
+}
+
+.pm-phone-preview-card:hover {
+  transform: translateY(-4px) scale(1.01);
+}
+
+.pm-phone-badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(17, 17, 17, 0.90);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(198, 151, 70, 0.45);
+  color: #FAF7F2;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 5px 12px;
+  border-radius: var(--pm-radius-pill);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  margin-bottom: -16px;
+  z-index: 10;
+  text-transform: uppercase;
+}
+
+.pm-phone-badge-tag .pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00E676;
+  box-shadow: 0 0 8px #00E676;
+}
+
+.pm-hero-phone-container .pm-phone-mockup-wrap {
+  width: clamp(246px, 21.6vw, 325px);
+  max-width: 325px;
+  height: auto;
+  filter: drop-shadow(0 20px 36px rgba(0, 0, 0, 0.20));
+  transform: rotate(3.5deg);
+  transition: transform 0.3s ease;
+}
+
+.pm-hero-phone-img {
+  width: 100%;
+  height: auto;
+  display: none;
+  object-fit: contain;
+  animation: pmFadeIn 0.35s ease forwards;
+}
+
+.pm-hero-phone-img.active {
+  display: block;
+}
+
+/* Secondary White Play Button */
+.pm-btn-white-play {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #111111;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--pm-radius-pill);
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.pm-btn-white-play:hover {
+  background: #FFFFFF;
+  border-color: rgba(198, 151, 70, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  color: #111111;
+}
+
+.pm-play-triangle {
+  font-size: 11px;
+  display: inline-block;
+  color: #111111;
+}
+
+/* Feature Icons Row (Attachment 1 & 2 exact style) */
+.pm-feature-icons-row {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(6px, 1.1vw, 16px);
+  margin-top: 10px;
+  flex-wrap: nowrap;
+}
+
+.pm-feature-icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 72px;
+  transition: transform 0.2s ease;
+}
+
+.pm-feature-icon-item:hover {
+  transform: translateY(-3px);
+}
+
+.pm-feature-icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(198, 151, 70, 0.45);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  transition: all 0.2s ease;
+}
+
+.pm-feature-icon-item:hover .pm-feature-icon-circle {
+  border-color: #C69746;
+  box-shadow: 0 6px 18px rgba(198, 151, 70, 0.25);
+}
+
+.pm-feat-svg {
+  display: block;
+  object-fit: contain;
+}
+
+.pm-feat-app {
+  border-radius: 6px;
+}
+
+.pm-feature-icon-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--pm-brand-black);
+  line-height: 1.25;
+  text-align: center;
+  display: block;
+}
+
+/* Live Collar Beacon: Exactly below circular medal and centered */
 .pm-hero-floating-layer {
   position: absolute;
   inset: 0;
@@ -487,120 +796,12 @@ a {
   z-index: 8;
 }
 
-.pm-hero-floating-layer .pm-floating-chip {
-  pointer-events: auto;
-  position: absolute;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 16px 8px 10px;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.95);
-  border-radius: var(--pm-radius-pill);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10), 0 2px 6px rgba(0, 0, 0, 0.04);
-  z-index: 10;
-  white-space: nowrap;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.pm-hero-floating-layer .pm-floating-chip:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.16);
-}
-
-.pm-floating-chip .pm-chip-icon {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: var(--pm-gold-subtle);
-  border: 1px solid rgba(198, 151, 70, 0.22);
-  color: var(--pm-gold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 17px;
-  flex-shrink: 0;
-  transition: all 0.25s ease;
-}
-
-.pm-floating-chip:hover .pm-chip-icon {
-  background: rgba(198, 151, 70, 0.16);
-  border-color: rgba(198, 151, 70, 0.35);
-}
-
-.pm-floating-chip .pm-chip-icon .material-symbols-outlined {
-  font-size: 20px;
-}
-
-.pm-benefit-icon-box .material-symbols-outlined {
-  font-size: 24px;
-}
-
-.pm-waterproof-svg-icon {
-  width: 22px;
-  height: 28px;
-  object-fit: contain;
-  display: block;
-}
-
-.pm-waterproof-svg-chip {
-  width: 17px;
-  height: 22px;
-  object-fit: contain;
-  display: block;
-}
-
-.pm-floating-chip .pm-chip-title {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--pm-dark);
-  line-height: 1.22;
-  text-align: left;
-  letter-spacing: -0.01em;
-}
-
-/* Tag 1: Works with Apple (Top Right in forest/mountain background) */
-.pm-chip-apple {
-  top: 14%;
-  right: clamp(14px, 3vw, 46px);
-  left: auto;
-  animation: pmFloat 5s ease-in-out infinite;
-}
-
-/* Tag 2: Unique Pet Profile (Top Left in clear mountain sky) */
-.pm-chip-profile {
-  top: 14%;
-  left: calc(clamp(45%, 48vw, 52%) - 45px);
-  animation: pmFloat 5s ease-in-out infinite;
-  animation-delay: 1.8s;
-}
-
-/* Tag 3: NFC & QR Tap (Mid Left in open meadow background) */
-.pm-chip-nfc {
-  top: 50%;
-  left: calc(clamp(45%, 47vw, 51%) - 45px);
-  animation: pmFloat 5s ease-in-out infinite;
-  animation-delay: 2.8s;
-}
-
-/* Tag 4: Light & Waterproof (Mid Right in pine forest background) */
-.pm-chip-waterproof {
-  top: 50%;
-  right: clamp(14px, 2.5vw, 40px);
-  left: auto;
-  animation: pmFloat 5s ease-in-out infinite;
-  animation-delay: 3.8s;
-}
-
-/* Live Collar Beacon: Exactly below circular medal and centered */
 .pm-hero-collar-beacon {
   position: absolute;
   left: calc(72.8% - 60px);
   bottom: calc(clamp(10px, 1.8vw, 20px) + 5px);
   top: auto;
-  transform: translateX(-50%);
+  transform: translateX(calc(-50% + 100px));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -636,14 +837,6 @@ a {
   box-shadow: 0 0 8px #27AE60;
 }
 
-.pm-beacon-badge .dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #27AE60;
-  box-shadow: 0 0 8px #27AE60;
-}
-
 @keyframes pmFloat {
   0%, 100% {
     transform: translateY(0px);
@@ -654,60 +847,86 @@ a {
 }
 
 /* ==========================================================================
-   02 — BENEFITS TICKER / VALUE STRIP
+   02 — BENEFITS TICKER / VALUE STRIP (Integrated Header Bottom Ribbon)
    ========================================================================== */
 .pm-benefits-section {
-  padding: var(--pm-section-gap) 0;
+  padding: 18px 0;
+  background: var(--pm-cream);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  position: relative;
+  z-index: 5;
 }
 
 .pm-benefits-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 0;
+  align-items: center;
 }
 
 .pm-benefit-card {
-  background: var(--pm-white);
-  border: 1px solid var(--pm-border-light);
-  border-radius: var(--pm-radius-md);
-  padding: 24px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 6px 20px;
   display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  box-shadow: var(--pm-shadow-sm);
-  transition: all 0.3s ease;
+  align-items: center;
+  gap: 14px;
+  box-shadow: none;
+  transition: none;
+  transform: none;
 }
 
 .pm-benefit-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--pm-shadow-md);
-  border-color: rgba(198, 151, 70, 0.3);
+  transform: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.pm-benefit-card:not(:last-child) {
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .pm-benefit-icon-box {
-  width: 46px;
-  height: 46px;
-  border-radius: 12px;
-  background: var(--pm-gold-subtle);
-  color: var(--pm-gold);
+  width: 36px;
+  height: 36px;
+  border-radius: 0;
+  background: transparent;
+  color: var(--pm-brand-black);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 22px;
   flex-shrink: 0;
 }
 
+.pm-benefit-icon-box svg,
+.pm-benefit-icon-box i {
+  color: var(--pm-brand-black);
+  fill: var(--pm-brand-black);
+}
+
+.pm-waterproof-svg-icon {
+  width: 20px;
+  height: 26px;
+  filter: brightness(0) saturate(100%);
+  display: block;
+}
+
 .pm-benefit-text h3 {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
-  color: var(--pm-dark);
-  line-height: 1.3;
+  color: var(--pm-brand-black);
+  line-height: 1.25;
+  margin: 0;
 }
 
 .pm-benefit-text p {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--pm-text-muted);
-  margin-top: 4px;
+  margin-top: 2px;
+  line-height: 1.3;
 }
 
 /* ==========================================================================
@@ -779,7 +998,8 @@ a {
   height: 56px;
   pointer-events: none;
   z-index: 2;
-  transition: transform 0.3s ease;
+  opacity: 0.3;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .pm-stat-paw-badge img {
@@ -1117,7 +1337,7 @@ a {
   align-items: center;
 }
 
-.pm-phone-mockup-wrap {
+.pm-phone-stage .pm-phone-mockup-wrap {
   position: relative;
   display: flex;
   justify-content: center;
@@ -1163,7 +1383,7 @@ a {
 
 .pm-finder-radar-bg {
   position: absolute;
-  top: calc(50% + 15px);
+  top: calc(50% + 20px);
   left: 50%;
   transform: translate(-50%, -46%);
   width: 440px;
@@ -1180,10 +1400,10 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 260px;
-  height: 260px;
+  width: 320px;
+  height: 320px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(198, 151, 70, 0.14) 0%, rgba(198, 151, 70, 0.03) 55%, transparent 75%);
+  background: radial-gradient(circle, rgba(198, 151, 70, 0.35) 0%, rgba(198, 151, 70, 0.15) 50%, transparent 75%);
   pointer-events: none;
 }
 
@@ -1195,8 +1415,8 @@ a {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 1px solid rgba(198, 151, 70, 0.32);
-  box-shadow: 0 0 8px rgba(198, 151, 70, 0.08);
+  border: 1.5px solid rgba(198, 151, 70, 0.55);
+  box-shadow: 0 0 14px rgba(198, 151, 70, 0.20);
   pointer-events: none;
   animation: pmRadarScan 4.2s cubic-bezier(0.12, 0.4, 0.25, 1) infinite;
   will-change: transform, opacity;
@@ -1220,20 +1440,22 @@ a {
     opacity: 0;
   }
   15% {
-    opacity: 0.65;
-    border-color: rgba(198, 151, 70, 0.35);
-    box-shadow: 0 0 10px rgba(198, 151, 70, 0.1);
+    opacity: 0.85;
+    border-color: rgba(198, 151, 70, 0.65);
+    box-shadow: 0 0 16px rgba(198, 151, 70, 0.28);
   }
-  55% {
-    opacity: 0.3;
-    border-color: rgba(198, 151, 70, 0.2);
-    box-shadow: 0 0 6px rgba(198, 151, 70, 0.04);
+  50% {
+    opacity: 0.55;
+    border-color: rgba(198, 151, 70, 0.45);
+    box-shadow: 0 0 12px rgba(198, 151, 70, 0.16);
   }
   80% {
-    opacity: 0.08;
+    opacity: 0.30;
+    border-color: rgba(198, 151, 70, 0.25);
+    box-shadow: 0 0 8px rgba(198, 151, 70, 0.08);
   }
   100% {
-    transform: translate(-50%, -50%) scale(0.96);
+    transform: translate(-50%, -50%) scale(1.0);
     opacity: 0;
     border-color: rgba(198, 151, 70, 0);
     box-shadow: 0 0 0 rgba(198, 151, 70, 0);
@@ -1785,9 +2007,25 @@ a {
 .pm-wand-icon-gold {
   width: 18px;
   height: 18px;
-  filter: brightness(0) saturate(100%) invert(75%) sepia(45%) saturate(750%) hue-rotate(5deg);
   display: inline-block;
   vertical-align: middle;
+  filter: none;
+}
+
+.pm-shipping-icon-gold {
+  width: 18px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.pm-guaranty-icon-gold {
+  width: 14px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
 }
 
 /* Live Tag Preview Stage */
@@ -1846,7 +2084,7 @@ a {
 }
 
 .pm-engrave-label {
-  color: var(--pm-gold-light);
+  color: var(--pm-gold);
   font-weight: 600;
 }
 
@@ -2279,11 +2517,12 @@ a {
 /* Laptop screens (1025px - 1440px) */
 @media (min-width: 1025px) and (max-width: 1440px) {
   .pm-hero-section.pm-hero-fullbleed {
-    min-height: clamp(560px, 46vw, 680px);
+    min-height: clamp(630px, 46.5vw, 710px);
+    padding: 16px 0 24px 0;
   }
   .pm-hero-bg-video,
   .pm-hero-bg-img {
-    object-position: 78% 58%;
+    object-position: center bottom;
   }
   .pm-hero-title {
     font-size: clamp(40px, 4.4vw, 58px);
@@ -2300,12 +2539,13 @@ a {
 /* Small Laptops & Tablets Landscape (881px - 1024px) */
 @media (min-width: 881px) and (max-width: 1024px) {
   .pm-hero-section.pm-hero-fullbleed {
-    min-height: 560px;
+    min-height: 601px;
     aspect-ratio: auto;
+    padding: 16px 0 24px 0;
   }
   .pm-hero-bg-video,
   .pm-hero-bg-img {
-    object-position: 80% 55%;
+    object-position: center bottom;
   }
   .pm-hero-grid {
     grid-template-columns: 1.15fr 0.85fr;
@@ -2317,9 +2557,10 @@ a {
     font-size: 14.5px;
   }
   .pm-hero-actions .pm-btn {
-    width: 170px;
-    height: 48px;
-    font-size: 13px;
+    width: 210px;
+    height: 52px;
+    font-size: 14px;
+    white-space: nowrap;
   }
   .pm-hero-floating-layer {
     display: none;
@@ -2382,14 +2623,23 @@ a {
 /* Small Tablets & Large Phones (<= 880px) */
 @media (max-width: 880px) {
   .pm-hero-section.pm-hero-fullbleed {
-    min-height: 520px;
+    min-height: auto;
+    max-height: none;
+    height: auto;
     aspect-ratio: auto;
-    padding: 40px 0;
+    align-items: flex-start;
+    padding: 24px 0 50px 0;
+  }
+
+  .pm-hero-bg-media {
+    width: 100%;
+    left: 0;
   }
 
   .pm-hero-bg-video,
   .pm-hero-bg-img {
-    object-position: 78% 50%;
+    transform: none;
+    object-position: center center;
   }
 
   .pm-hero-grid {
@@ -2397,7 +2647,21 @@ a {
   }
 
   .pm-hero-dog-stage {
-    display: none;
+    display: flex;
+    justify-content: center;
+    min-height: auto;
+    margin-top: 28px;
+    width: 100%;
+  }
+
+  .pm-hero-phone-container {
+    margin: 0 auto;
+    transform: none;
+  }
+
+  .pm-hero-phone-container .pm-phone-mockup-wrap {
+    width: clamp(218px, 48vw, 290px);
+    max-width: 290px;
   }
 
   .pm-hero-floating-layer {
@@ -2405,9 +2669,30 @@ a {
   }
 }
 
+@media (max-width: 1024px) {
+  .pm-benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 0;
+  }
+  .pm-benefit-card:nth-child(odd) {
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  .pm-benefit-card:nth-child(even) {
+    border-right: none;
+  }
+}
+
 @media (max-width: 768px) {
   .pm-benefits-grid {
     grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .pm-benefit-card {
+    border-right: none !important;
+    padding: 8px 12px;
+  }
+  .pm-benefit-card:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   }
 
   .pm-stats-cards-col {
@@ -2421,8 +2706,9 @@ a {
 
 @media (max-width: 640px) {
   .pm-hero-section.pm-hero-fullbleed {
-    min-height: 520px;
-    padding: 34px 0 40px 0;
+    min-height: auto;
+    height: auto;
+    padding: 48px 0 60px 0;
   }
 
   .pm-hero-section.pm-hero-fullbleed::before {
@@ -2436,7 +2722,30 @@ a {
 
   .pm-hero-bg-video,
   .pm-hero-bg-img {
-    object-position: 80% 40%;
+    object-position: center center;
+  }
+
+  br.pm-break-desktop {
+    display: none;
+  }
+
+  .pm-hero-product-switcher {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .pm-switch-btn {
+    padding: 7px 12px;
+    font-size: 12px;
+  }
+
+  .pm-switch-btn .pm-switch-badge {
+    display: none;
+  }
+
+  .pm-hero-phone-container {
+    width: 100%;
+    max-width: 320px;
   }
 
   .pm-hero-title {
@@ -2468,8 +2777,11 @@ a {
     align-items: stretch;
   }
 
-  .pm-hero-actions .pm-btn {
+  .pm-feature-icons-row {
+    justify-content: center;
+    gap: 12px 10px;
     width: 100%;
+    margin-top: 20px;
   }
 
   .pm-phone-mockup-img {
