@@ -2669,6 +2669,29 @@ a {
   }
 }
 
+/* Light readability wash over the hero artwork; it fades out before the dog. */
+.pm-hero-bg-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background: linear-gradient(90deg,
+    rgba(250, 247, 242, 0.9) 0%,
+    rgba(250, 247, 242, 0.72) 24%,
+    rgba(250, 247, 242, 0.3) 43%,
+    rgba(250, 247, 242, 0) 66%);
+}
+
+@media (max-width: 640px) {
+  .pm-hero-bg-media::after {
+    background: linear-gradient(180deg,
+      rgba(250, 247, 242, 0.72) 0%,
+      rgba(250, 247, 242, 0.3) 55%,
+      rgba(250, 247, 242, 0) 100%);
+  }
+}
+
 @media (max-width: 1024px) {
   .pm-benefits-grid {
     grid-template-columns: repeat(2, 1fr);
