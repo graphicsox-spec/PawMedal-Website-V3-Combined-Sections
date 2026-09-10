@@ -2676,14 +2676,16 @@ a {
   background: var(--pm-cream) url('./why-it-matters.png') center center / cover no-repeat;
 }
 .pm-stats-grid {
-  grid-template-columns: minmax(0, 1fr) minmax(560px, 1.06fr);
+  width: 100%;
+  min-width: 0;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.06fr);
   gap: clamp(34px, 5vw, 86px);
   align-items: center;
 }
 .pm-stats-narrative { max-width: 700px; }
 .pm-stats-narrative h2 { max-width: 620px; font-size: clamp(34px, 3.35vw, 56px); line-height: 1.04; letter-spacing: -.04em; }
 .pm-stats-narrative p { max-width: 630px; margin-top: 20px; font-size: clamp(15px, 1.05vw, 18px); line-height: 1.52; }
-.pm-stats-cards-col { grid-template-columns: 1fr 1fr; gap: clamp(18px, 2vw, 30px); align-items: start; }
+.pm-stats-cards-col { min-width: 0; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(18px, 2vw, 30px); align-items: start; }
 .pm-stat-box { min-height: 250px; padding: 30px 24px 24px; border-radius: 26px; background: rgba(255,255,255,.84); backdrop-filter: blur(3px); }
 .pm-stat-box:nth-child(2) { margin-top: 82px; }
 .pm-stat-number { font-size: clamp(42px, 3.4vw, 58px); margin-top: 18px; }
