@@ -2676,8 +2676,8 @@ a {
 
 /* Why it matters: artwork-led split layout matching the supplied reference. */
 .pm-stats-section {
-  padding: clamp(56px, 7vw, 92px) 0;
-  min-height: 560px;
+  padding: clamp(45px, 5.6vw, 74px) 0;
+  min-height: 448px;
   background: var(--pm-cream) url('./why-it-matters.png') center center / cover no-repeat;
 }
 .pm-stats-grid {
