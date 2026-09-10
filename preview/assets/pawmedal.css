@@ -2688,14 +2688,14 @@ a {
 .pm-stat-box:nth-child(2) { margin-top: 82px; }
 .pm-stat-number { font-size: clamp(42px, 3.4vw, 58px); margin-top: 18px; }
 .pm-stat-label { max-width: 220px; font-size: 14px; line-height: 1.4; }
-.pm-stats-promise { display:flex; align-items:center; gap:18px; width:60%; max-width:414px; margin-top:30px; padding:14px 18px; border:1px solid rgba(185,139,61,.25); border-radius:100%; background:rgba(255,255,255,.42); }
+.pm-stats-promise { display:flex; align-items:center; gap:18px; width:60%; max-width:414px; margin-top:30px; padding:14px 18px; border:1px solid rgba(185,139,61,.25); border-radius:50px; background:rgba(255,255,255,.42); }
 .pm-stats-promise-icon,.pm-stats-promise-arrow { display:grid; place-items:center; flex:0 0 54px; width:54px; height:54px; border-radius:50%; background:var(--pm-gold); color:white; font-size:22px; }
 .pm-stats-promise-arrow { margin-left:auto; flex-basis:42px; width:42px; height:42px; }
 .pm-stats-promise strong,.pm-stats-promise small { display:block; color:var(--pm-dark); }
 .pm-stats-promise strong { font-size:17px; }
 .pm-stats-promise small { margin-top:3px; color:var(--pm-text-muted); font-size:14px; }
 @media(max-width:1100px){.pm-stats-grid{grid-template-columns:1fr;}.pm-stats-narrative{max-width:760px;margin:auto;}.pm-stats-cards-col{max-width:760px;width:100%;margin:auto;}.pm-stats-section{background-position:center center;}}
-@media(max-width:620px){.pm-stats-section{padding:46px 0;background-position:center top;}.pm-stats-cards-col{grid-template-columns:1fr;}.pm-stat-box:nth-child(2){margin-top:0;}.pm-stat-box{min-height:240px;padding:34px 25px;}.pm-stats-promise{width:100%;max-width:none;border-radius:100%;}.pm-stats-promise-arrow{display:none;}}
+@media(max-width:620px){.pm-stats-section{padding:46px 0;background-position:center top;}.pm-stats-cards-col{grid-template-columns:1fr;}.pm-stat-box:nth-child(2){margin-top:0;}.pm-stat-box{min-height:240px;padding:34px 25px;}.pm-stats-promise{width:100%;max-width:none;border-radius:28px;}.pm-stats-promise-arrow{display:none;}}
 
 /* Light readability wash over the hero artwork; it fades out before the dog. */
 .pm-hero-bg-media::after {
