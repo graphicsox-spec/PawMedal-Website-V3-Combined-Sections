@@ -2698,6 +2698,7 @@ a {
 .pm-stat-paw-badge { font-size: 72px; color: #eaddc5; opacity: .7; }
 .pm-stat-paw-badge i { font-size: inherit; }
 .pm-stat-paw-badge img { display:none; }
+.pm-stat-paw-badge.is-inverted i { transform:scaleY(-1); }
 .pm-stat-number { font-size: clamp(42px, 3.4vw, 58px); margin-top: 18px; }
 .pm-stat-label { max-width: 220px; font-size: 14px; line-height: 1.4; }
 .pm-stats-promise { display:flex; align-items:center; gap:14px; width:56.1%; max-width:387px; min-height:59px; margin-top:30px; padding:5px 16px; border:1px solid rgba(185,139,61,.25); border-radius:50px; background:rgba(255,255,255,.42); }
