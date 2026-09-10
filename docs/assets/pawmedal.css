@@ -2692,7 +2692,7 @@ a {
 .pm-stats-narrative p { max-width: 630px; margin-top: 20px; font-size: clamp(15px, 1.05vw, 18px); line-height: 1.52; }
 .pm-stats-cards-col { min-width: 0; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0; align-items: start; }
 .pm-stat-box { width:70%; min-height: 250px; padding: 30px 24px 24px; border-radius: 26px; background: rgba(255,255,255,.84); backdrop-filter: blur(3px); position:relative; z-index:1; }
-.pm-stat-box:first-child { justify-self:start; }
+.pm-stat-box:first-child { justify-self:end; transform:translateX(12%) rotate(-1deg); }
 .pm-stat-box:nth-child(2) { justify-self:end; margin-top: 82px; transform:translateX(-12%) rotate(1deg); z-index:2; }
 .pm-stat-paw-badge { font-size: 72px; color: #eaddc5; opacity: .7; }
 .pm-stat-paw-badge i { font-size: inherit; }
