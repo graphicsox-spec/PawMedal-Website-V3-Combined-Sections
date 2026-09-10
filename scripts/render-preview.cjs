@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { createHash } = require('crypto');
 const { Liquid } = require('liquidjs');
 
 const root = path.resolve(__dirname, '..');
@@ -51,6 +52,7 @@ const sections = JSON.parse(fs.readFileSync(path.join(__dirname, 'sections.json'
     body += `\n    <!-- SECTION ${s.name} -->\n    ` + rendered.trim() + '\n';
   }
 
+  const cssVersion = createHash('sha256').update(fs.readFileSync(path.join(root, 'theme/assets/pawmedal.css'))).digest('hex').slice(0, 12);
   const doc = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,7 +64,7 @@ const sections = JSON.parse(fs.readFileSync(path.join(__dirname, 'sections.json'
   <link rel="apple-touch-icon" href="./assets/Favicon.svg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=format_color_reset">
-  <link rel="stylesheet" href="./assets/pawmedal.css">
+  <link rel="stylesheet" href="./assets/pawmedal.css?v=${cssVersion}">
   <script>
     /* PawMedal Security & IP Protection */
     (function(){
