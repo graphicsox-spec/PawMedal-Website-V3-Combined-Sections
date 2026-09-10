@@ -88,8 +88,9 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: clip;
-  max-width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 section[id] {
@@ -101,8 +102,9 @@ body.pawmedal-v2-body {
   background-color: var(--pm-cream);
   color: var(--pm-text-main);
   line-height: 1.6;
-  overflow-x: clip;
-  max-width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
+  max-width: 100%;
   font-size: 16px;
   -webkit-user-select: none;
   -moz-user-select: none;
