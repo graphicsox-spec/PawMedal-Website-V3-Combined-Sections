@@ -2964,3 +2964,31 @@ a {
 /* Match the image to the section width, excluding the browser scrollbar. */
 @media(min-width:901px){.pm-cloud-banner{aspect-ratio:1920 / 1000;min-height:0;}}
 @media(max-width:900px){.pm-cloud-banner{padding-top:calc(46.875vw + 24px);background-size:100% auto;background-position:center top;min-height:0;}}
+
+/* Keep the complete hero artwork visible at every viewport size. */
+.pm-hero-bg-img,
+.pm-hero-bg-video {
+  object-fit: contain;
+  object-position: center top;
+}
+@media (min-width: 881px) {
+  .pm-hero-section.pm-hero-fullbleed {
+    aspect-ratio: 16 / 9;
+  }
+}
+@media (max-width: 880px) {
+  .pm-hero-section.pm-hero-fullbleed {
+    flex-direction: column;
+    padding-top: 0;
+  }
+  .pm-hero-bg-media {
+    position: relative;
+    inset: auto;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    flex-shrink: 0;
+  }
+  .pm-hero-section.pm-hero-fullbleed::before {
+    display: none;
+  }
+}
