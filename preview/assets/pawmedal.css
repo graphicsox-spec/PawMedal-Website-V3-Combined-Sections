@@ -2695,7 +2695,7 @@ a {
 .pm-stat-box:nth-child(2) { margin-top: 82px; }
 .pm-stat-number { font-size: clamp(42px, 3.4vw, 58px); margin-top: 18px; }
 .pm-stat-label { max-width: 220px; font-size: 14px; line-height: 1.4; }
-.pm-stats-promise { display:flex; align-items:center; gap:18px; width:60%; max-width:414px; min-height:74px; margin-top:30px; padding:8px 18px; border:1px solid rgba(185,139,61,.25); border-radius:50px; background:rgba(255,255,255,.42); }
+.pm-stats-promise { display:flex; align-items:center; gap:14px; width:51%; max-width:352px; min-height:59px; margin-top:30px; padding:5px 16px; border:1px solid rgba(185,139,61,.25); border-radius:50px; background:rgba(255,255,255,.42); }
 .pm-stats-promise-icon,.pm-stats-promise-arrow { display:grid; place-items:center; flex:0 0 54px; width:54px; height:54px; border-radius:50%; background:var(--pm-gold); color:white; font-size:22px; }
 .pm-stats-promise-arrow { margin-left:auto; flex-basis:34px; width:34px; height:34px; }
 .pm-stats-promise strong,.pm-stats-promise small { display:block; color:var(--pm-dark); }
