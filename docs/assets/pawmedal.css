@@ -2883,6 +2883,8 @@ a {
 .pm-reference-intro{padding:22px 29px 0;position:relative;z-index:2;min-height:149px;border-radius:26px 26px 0 0;background:linear-gradient(120deg,#fff,#f3f8fa88)}
 .pm-reference-eyebrow{display:flex;align-items:center;gap:13px;font-size:11px;font-weight:700;letter-spacing:1.35px;color:#5a5c62;margin-bottom:12px}
 .pm-reference-eyebrow i{color:#a67529;font-size:18px}
+.pm-reference-eyebrow-svg{display:inline-block;width:18px;height:18px;flex:0 0 18px;background:#a67529}
+.pm-reference-findmy-icon{-webkit-mask:url('./apple-find-my-icon_1.svg') center/contain no-repeat;mask:url('./apple-find-my-icon_1.svg') center/contain no-repeat}
 .pm-reference-intro h3{font-size:29px;font-weight:800;letter-spacing:-1.1px;margin-bottom:7px}
 .pm-reference-intro p{font-size:16px;line-height:1.35;color:#515761}
 .pm-reference-photo{position:relative;height:255px;overflow:visible}
