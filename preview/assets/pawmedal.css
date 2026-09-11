@@ -3024,11 +3024,10 @@ a {
 /* Preserve the native banner and nudge its canvas right so the left phone stays fully visible on narrower desktop viewports. */
 @media(min-width:1251px){.pm-cloud-banner{background-position:calc(50% + 180px) top;}}
 @media(min-width:901px) and (max-width:1250px){.pm-cloud-banner{background-position:calc(50% + 120px) top;}}
-/* Full-image responsive framing: preserve source ratio and never crop. */
-.pm-cloud-banner{background-position:center top;background-repeat:no-repeat;background-size:100% auto;min-height:0;}
-/* Match the image to the section width, excluding the browser scrollbar. */
+/* Cloud banner: show the complete edited artwork without cropping. */
+.pm-cloud-banner{background-position:center top;background-repeat:no-repeat;background-size:contain;min-height:0;}
 @media(min-width:901px){.pm-cloud-banner{aspect-ratio:1920 / 1000;min-height:0;}}
-@media(max-width:900px){.pm-cloud-banner{padding-top:calc(46.875vw + 24px);background-size:100% auto;background-position:center top;min-height:0;}}
+@media(max-width:900px){.pm-cloud-banner{padding-top:calc(52.083333vw + 24px);background-size:contain;background-position:center top;min-height:0;}}
 
 /* Keep the complete hero artwork visible at every viewport size. */
 .pm-hero-bg-img,
